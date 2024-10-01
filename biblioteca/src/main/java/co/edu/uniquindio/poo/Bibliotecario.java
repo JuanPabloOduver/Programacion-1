@@ -21,6 +21,7 @@ public class Bibliotecario extends Persona {
      */
     public void añadirPrestamo(Prestamo prestamo){
         historialPrestamos.add(prestamo);
+        this.salario+= prestamo.getCostoTotal()*0.2+prestamo.getCostoTotal()*0.02*this.antiguedad;
         cantidadPrestamos++;
     }
     
@@ -56,10 +57,19 @@ public class Bibliotecario extends Persona {
     public void setCantidadPrestamos(int cantidadPrestamos) {
         this.cantidadPrestamos = cantidadPrestamos;
     }
+    
+    public LinkedList<Prestamo> getHistorialPrestamos() {
+        return historialPrestamos;
+    }
 
+    public void setHistorialPrestamos(LinkedList<Prestamo> historialPrestamos) {
+        this.historialPrestamos = historialPrestamos;
+    }
+    
     @Override
     public String toString() {
-        return "Bibliotecario{" + "salario=" + salario + ", antiguedad=" + antiguedad + ", historialPrestamos=" + historialPrestamos + ", cantidadPrestamos=" + cantidadPrestamos + '}';
+        return "Bibliotecario [salario=" + salario + ", antiguedad=" + antiguedad + ", historialPrestamos="
+                + historialPrestamos + ", cantidadPrestamos=" + cantidadPrestamos + "]";
     }
 
 }

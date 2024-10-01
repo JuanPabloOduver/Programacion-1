@@ -74,22 +74,6 @@ public class Biblioteca {
         }
     }
 
-
-    /*
-    public void capacidadLibros() {
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Ingrese la capacidad de libros de la biblioteca: ");
-        this.capacidadLibros = sc.nextInt();
-
-    }
-
-    public void CantidadLibros() {
-        for (Libro libro : libros) {
-            this.cantidadLibros += libro.getUnidadesDisponibles();
-        }
-    }
-     */
     /**
      * Metodo que consulta los datos de un libro segun su codigo ISBN
      *
@@ -243,6 +227,79 @@ public class Biblioteca {
                 System.out.println("No se puede disminuir la cantidad dicha, ya que excede el 0");
             }
         }
+    }
+
+    public void buscarEstudiante(String cedula) {
+        if (verificarEstudiante(cedula)) {
+            boolean encontrado = false; // Para verificar si se encontró al estudiante
+            for (Estudiante estudiante : estudiantes) {
+                if (estudiante.getCedula().equals(cedula)) {
+                    System.out.println(estudiante);
+                    encontrado = true; // Marcamos que se encontró al menos un estudiante
+                }
+            }
+            if (!encontrado) {
+                System.out.println("No se encontró un estudiante con la cédula: " + cedula);
+            }
+        } else {
+            System.out.println("No se encontró un estudiante con la cédula: " + cedula);
+        }
+    }
+
+    public void buscarBibliotecario(String cedula) {
+        if (verificarBibliotecario(cedula)) {
+            boolean encontrado = false; // Para verificar si se encontró al estudiante
+            for (Bibliotecario bibliotecario : bibliotecarios) {
+                if (bibliotecario.getCedula().equals(cedula)) {
+                    System.out.println(bibliotecario);
+                    encontrado = true; // Marcamos que se encontró al menos un estudiante
+                }
+            }
+            if (!encontrado) {
+                System.out.println("No se encontró un bibliotecario con la cédula: " + cedula);
+            }
+        } else {
+            System.out.println("No se encontró un bibliotecario con la cédula: " + cedula);
+        }
+    }
+
+    public void buscarLibro(String ISBN) {
+        if (verificarLibro(ISBN)) {
+            boolean encontrado = false; // Para verificar si se encontró al estudiante
+            for (Libro libro : libros) {
+                if (libro.getISBN().equals(ISBN)) {
+                    System.out.println(libro);
+                    encontrado = true; // Marcamos que se encontró al menos un estudiante
+                }
+            }
+            if (!encontrado) {
+                System.out.println("No se encontró un libro con el ISBN: " + ISBN);
+            }
+        } else {
+            System.out.println("No se encontró un libro con la ISBN: " + ISBN);
+        }
+    }
+
+    public void sobreescribirLibro(String isbn, Libro libro) {
+        if (verificarLibro(isbn)) {
+            for (Libro libro1 : libros) {
+                if (libro1.getISBN().equals(isbn)) {
+                    libro1 = libro;
+                }
+            }
+        }
+    }
+
+    public void prestamosBibliotecario(String cedula) {
+        int numeroPrestamos = 0;
+        for (Bibliotecario bibliotecario : bibliotecarios) {
+            if (bibliotecario.getCedula().equals(cedula)) {
+                numeroPrestamos = bibliotecario.getHistorialPrestamos().size();
+                System.out.println("El bibliotecario " + bibliotecario.getNombre() + " Tiene " + numeroPrestamos + " prestamos.");
+                break;
+            }
+        }
+
     }
 
     /**

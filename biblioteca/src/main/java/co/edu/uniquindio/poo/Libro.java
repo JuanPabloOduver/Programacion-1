@@ -1,94 +1,105 @@
 package co.edu.uniquindio.poo;
 import java.time.LocalDate;
 
-
 public class Libro {
-    private String codigo, isbn, autor, editorial, titulo;
-    private LocalDate fechaPublicacion; 
-    private boolean estado; 
-    private int unidadesDisponibles; 
+    
+    private String code, ISBN, titulo, editorial;
+    private LocalDate fechaPublicacion;
+    private int unidadesDisponibles;
+    private EstadoLibro estado;
+    private Autor autor;
+    
 
-    public Libro (String codigo, String isbn, String autor, String editorial, String titulo, LocalDate fechaPublicacion, boolean estado, int unidadesDisponibles){
-        this.codigo = codigo; 
-        this.isbn = isbn;
-        this.autor = autor; 
-        this.editorial = editorial; 
-        this.titulo = titulo; 
-        this.fechaPublicacion = fechaPublicacion; 
-        this.estado = estado;
-        this.unidadesDisponibles = unidadesDisponibles; 
-    }
-
-    public String getCodigo() {
-        return codigo;
-    }
-
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
-    }
-
-    public String getIsbn() {
-        return isbn;
-    }
-
-    public void setIsbn(String isbn) {
-        this.isbn = isbn;
-    }
-
-    public String getAutor() {
-        return autor;
-    }
-
-    public void setAutor(String autor) {
+    public Libro(String code, String ISBN, Autor autor, String titulo, String editorial, LocalDate fechaPublicacion, int unidadesDisponibles, EstadoLibro estado) {
+        this.code = code;
+        this.ISBN = ISBN;
         this.autor = autor;
-    }
-
-    public String getEditorial() {
-        return editorial;
-    }
-
-    public void setEditorial(String editorial) {
+        this.titulo = titulo;
         this.editorial = editorial;
+        this.fechaPublicacion = fechaPublicacion;
+        this.unidadesDisponibles = unidadesDisponibles;
+        this.estado=estado;
+    }
+    
+    public void aumentarUnidades(int num){
+        this.unidadesDisponibles+=num;
+    }
+    
+    public void disminuirUnidades(int num){
+        this.unidadesDisponibles-=num;
+    }
+    
+    
+
+    public EstadoLibro getEstado() {
+        return estado;
+    }
+    
+    public String getCode() {
+        return code;
+    }
+
+    public String getISBN() {
+        return ISBN;
+    }
+
+    public Autor getAutor() {
+        return autor;
     }
 
     public String getTitulo() {
         return titulo;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
+    public String getEditorial() {
+        return editorial;
     }
 
     public LocalDate getFechaPublicacion() {
         return fechaPublicacion;
     }
 
-    public void setFechaPublicacion(LocalDate fechaPublicacion) {
-        this.fechaPublicacion = fechaPublicacion;
-    }
-
-    public boolean isEstado() {
-        return estado;
-    }
-
-    public void setEstado(boolean estado) {
-        this.estado = estado;
-    }
-
     public int getUnidadesDisponibles() {
         return unidadesDisponibles;
     }
 
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public void setISBN(String ISBN) {
+        this.ISBN = ISBN;
+    }
+
+    public void setAutor(Autor autor) {
+        this.autor = autor;
+    }
+
+    public void setEstado(EstadoLibro estado) {
+        this.estado = estado;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public void setEditorial(String editorial) {
+        this.editorial = editorial;
+    }
+
+    public void setFechaPublicacion(LocalDate fechaPublicacion) {
+        this.fechaPublicacion = fechaPublicacion;
+    }
+
     public void setUnidadesDisponibles(int unidadesDisponibles) {
-        this.unidadesDisponibles = unidadesDisponibles;
+        this.unidadesDisponibles=unidadesDisponibles;
     }
 
     @Override
     public String toString() {
-        return "Libro [codigo=" + codigo + ", isbn=" + isbn + ", autor=" + autor + ", editorial=" + editorial
-                + ", titulo=" + titulo + ", fechaPublicacion=" + fechaPublicacion + ", estado=" + estado
-                + ", unidadesDisponibles=" + unidadesDisponibles + "]";
+        return "Libro{" + "code=" + code + ", ISBN=" + ISBN + ", autor=" + autor + ", titulo=" + titulo + ", editorial=" + editorial + ", fechaPublicacion=" + fechaPublicacion + ", unidadesDisponibles=" + unidadesDisponibles + ", estado: "+ estado+ '}';
     }
-
+    
+    
     
 }

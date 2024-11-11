@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="401.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="407.0" fitWidth="408.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../Downloads/Tu%20Carro%20UQ.jpg" />
+         </image>
+      </ImageView>
+      <TextField layoutX="163.0" layoutY="143.0" opacity="0.2" />
+      <Label layoutX="70.0" layoutY="143.0" text="Usuario:">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="36.0" layoutY="202.0" text="Contraseña:">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtContrasenia" layoutX="163.0" layoutY="201.0" opacity="0.2" />
+      <ImageView fx:id="txtUsuario" fitHeight="263.0" fitWidth="242.0" layoutX="83.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../Downloads/Tu_Carro_UQ__1_-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnIniciarSesionEmpleado" layoutX="83.0" layoutY="263.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="242.0" style="-fx-background-color: #187b3b;" text="Iniciar Sesión como Empleado" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnRecuperarContrasenia" layoutX="14.0" layoutY="339.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="214.0" style="-fx-background-color: 0;" text="Olviste tu contraseña?">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

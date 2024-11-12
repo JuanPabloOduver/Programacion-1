@@ -6,7 +6,6 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="303.0" prefWidth="590.0" style="-fx-background-color: #187b3b;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="320.0" layoutY="27.0" text="Bienvenido a Tu Carro UQ">
@@ -16,7 +15,7 @@
       </Label>
       <ImageView fitHeight="303.0" fitWidth="309.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../Downloads/LogoTuCarroUQ.png" />
+            <Image url="https://drive.google.com/file/d/1WF-J9EOJbHg28LvHv_nMueWNCtBn54Ns/view?usp=sharing" />
          </image>
       </ImageView>
       <Button fx:id="btnIngresarComoAdmin" layoutX="320.0" layoutY="184.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="256.0" style="-fx-background-color: #7ab98b;" text="Ingresar como Administrador">

@@ -6,7 +6,6 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="401.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fitHeight="407.0" fitWidth="408.0" pickOnBounds="true" preserveRatio="true">
@@ -15,7 +14,7 @@
          </image>
       </ImageView>
       <TextField fx:id="txtUsuario" layoutX="163.0" layoutY="143.0" opacity="0.2" />
-      <Label layoutX="70.0" layoutY="143.0" text="Usuario:">
+      <Label layoutX="77.0" layoutY="144.0" text="Cedula:">
          <font>
             <Font name="System Bold Italic" size="20.0" />
          </font>
@@ -26,7 +25,7 @@
          </font>
       </Label>
       <TextField fx:id="txtContrasenia" layoutX="163.0" layoutY="201.0" opacity="0.2" />
-      <ImageView fitHeight="263.0" fitWidth="242.0" layoutX="83.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="263.0" fitWidth="242.0" layoutX="83.0" layoutY="-42.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../../../../Downloads/Tu_Carro_UQ__1_-removebg-preview.png" />
          </image>
@@ -36,7 +35,7 @@
             <Font name="System Bold Italic" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="btnRecuperarContrasenia" layoutX="14.0" layoutY="339.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="214.0" style="-fx-background-color: 0;" text="Olviste tu contraseña?">
+      <Button fx:id="btnRecuperarContrasenia" layoutX="14.0" layoutY="339.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="234.0" style="-fx-background-color: 0;" text="Olvidaste tu contraseña?">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font>

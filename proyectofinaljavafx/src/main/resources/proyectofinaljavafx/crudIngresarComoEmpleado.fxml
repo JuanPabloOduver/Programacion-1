@@ -14,7 +14,7 @@
          </image>
       </ImageView>
       <TextField layoutX="163.0" layoutY="143.0" opacity="0.2" />
-      <Label layoutX="70.0" layoutY="143.0" text="Usuario:">
+      <Label layoutX="77.0" layoutY="144.0" text="Cedula:">
          <font>
             <Font name="System Bold Italic" size="20.0" />
          </font>
@@ -25,7 +25,7 @@
          </font>
       </Label>
       <TextField fx:id="txtContrasenia" layoutX="163.0" layoutY="201.0" opacity="0.2" />
-      <ImageView fx:id="txtUsuario" fitHeight="263.0" fitWidth="242.0" layoutX="83.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="txtUsuario" fitHeight="263.0" fitWidth="242.0" layoutX="83.0" layoutY="-42.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../../../../Downloads/Tu_Carro_UQ__1_-removebg-preview.png" />
          </image>
@@ -35,7 +35,7 @@
             <Font name="System Bold Italic" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="btnRecuperarContrasenia" layoutX="14.0" layoutY="339.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="214.0" style="-fx-background-color: 0;" text="Olviste tu contraseña?">
+      <Button fx:id="btnRecuperarContrasenia" layoutX="14.0" layoutY="339.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="242.0" style="-fx-background-color: 0;" text="Olvidaste tu contraseña?">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font>

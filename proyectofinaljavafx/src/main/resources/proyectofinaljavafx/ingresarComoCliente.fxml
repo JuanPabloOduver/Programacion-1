@@ -37,5 +37,15 @@
             <Font name="System Bold Italic" size="18.0" />
          </font>
       </Button>
+      <Button fx:id="btnVolver" layoutX="38.0" layoutY="20.0" mnemonicParsing="false" onAction="#onOpenPrimary" style="-fx-background-color: #7ab98c;" text="Volver">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <Text fontSmoothingType="LCD" layoutX="27.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;" wrappingWidth="28.26123046875">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
    </children>
 </Pane>

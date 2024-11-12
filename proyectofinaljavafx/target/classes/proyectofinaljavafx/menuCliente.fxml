@@ -15,22 +15,22 @@
             <Image url="@../imagenes/Tu_Carro_UQ__1_-removebg-preview.png" />
          </image>
       </ImageView>
-      <Button fx:id="btnIniciarSesionEmpleado" layoutX="139.0" layoutY="130.0" mnemonicParsing="false" onAction="#onOpenMenuEmpleado" prefHeight="49.0" prefWidth="225.0" style="-fx-background-color: #187b3b;" text="Registrar Empleado" textFill="WHITE">
+      <Button fx:id="btnIniciarSesionEmpleado" layoutX="139.0" layoutY="130.0" mnemonicParsing="false" onAction="#onOpenMenuEmpleado" prefHeight="49.0" prefWidth="225.0" style="-fx-background-color: #187b3b;" text="Solicitar Compra" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="15.0" />
          </font>
       </Button>
-      <Label layoutX="52.0" layoutY="21.0" text="Bienvenido Administrador">
+      <Label layoutX="52.0" layoutY="21.0" text="Bienvenido Cliente">
          <font>
-            <Font name="System Bold Italic" size="23.0" />
+            <Font name="System Bold Italic" size="26.0" />
          </font>
       </Label>
-      <Button fx:id="btnIniciarSesionEmpleado1" layoutX="139.0" layoutY="191.0" mnemonicParsing="false" onAction="#onOpenMenuEmpleado" prefHeight="49.0" prefWidth="225.0" style="-fx-background-color: #187b3b;" text="Gestionar Empleados" textFill="WHITE">
+      <Button fx:id="btnIniciarSesionEmpleado1" layoutX="139.0" layoutY="191.0" mnemonicParsing="false" onAction="#onOpenMenuEmpleado" prefHeight="49.0" prefWidth="225.0" style="-fx-background-color: #187b3b;" text="Solicitar Alquiler" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="btnIniciarSesionEmpleado11" layoutX="139.0" layoutY="250.0" mnemonicParsing="false" onAction="#onOpenMenuEmpleado" prefHeight="49.0" prefWidth="225.0" style="-fx-background-color: #187b3b;" text="Reporte de Negocios" textFill="WHITE">
+      <Button fx:id="btnIniciarSesionEmpleado11" layoutX="139.0" layoutY="250.0" mnemonicParsing="false" onAction="#onOpenMenuEmpleado" prefHeight="49.0" prefWidth="225.0" style="-fx-background-color: #187b3b;" text="Solicitar Venta" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="15.0" />
          </font>
@@ -45,7 +45,7 @@
             <Font size="20.0" />
          </font>
       </Text>
-      <Button fx:id="btnVolver" layoutX="25.0" layoutY="336.0" mnemonicParsing="false" onAction="#onOpenIngresarComoAdmin" style="-fx-background-color: #7ab98c;" text="Volver">
+      <Button fx:id="btnVolver" layoutX="25.0" layoutY="336.0" mnemonicParsing="false" onAction="#onOpenIngresarComoCliente" style="-fx-background-color: #7ab98c;" text="Volver">
          <font>
             <Font name="System Bold Italic" size="15.0" />
          </font>

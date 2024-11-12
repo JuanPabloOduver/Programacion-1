@@ -1,6 +1,8 @@
 package proyectofinaljavafx.Model;
 
 public enum TipoCamion {
+    //Valores de la ennumeración
+    
     LIVIANO, //Para camiones pequeños
     MEDIANO, //Camiones carga media
     PESADO,  //Camiones carga pesada

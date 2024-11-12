@@ -27,12 +27,12 @@
             <Image url="@../../../../../../../../../Downloads/Tu_Carro_UQ__1_-removebg-preview.png" />
          </image>
       </ImageView>
-      <Button fx:id="btnIniciarSesionAdmin" layoutX="83.0" layoutY="263.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="242.0" style="-fx-background-color: #187b3b;" text="Iniciar Sesión como Admin" textFill="WHITE">
+      <Button fx:id="btnIniciarSesionAdmin" layoutX="83.0" layoutY="263.0" mnemonicParsing="false" onAction="#onOpenMenuAdmin" prefHeight="49.0" prefWidth="242.0" style="-fx-background-color: #187b3b;" text="Iniciar Sesión como Admin" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="btnRecuperarContrasenia" layoutX="14.0" layoutY="339.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="242.0" style="-fx-background-color: 0;" text="¿Olvidaste tu contraseña?">
+      <Button fx:id="btnRecuperarContrasenia" layoutX="14.0" layoutY="339.0" mnemonicParsing="false" onAction="#onOpenRecuperarContrasenia" prefHeight="39.0" prefWidth="242.0" style="-fx-background-color: 0;" text="¿Olvidaste tu contraseña?">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="382.0" prefWidth="502.0" style="-fx-background-color: #7ab98c;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="HARD_LIGHT" fill="WHITE" height="263.0" layoutX="52.0" layoutY="73.0" opacity="0.75" stroke="WHITE" strokeType="INSIDE" width="399.0" />
+      <ImageView fx:id="txtUsuario" fitHeight="135.0" fitWidth="134.0" layoutX="333.0" layoutY="-26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/Tu_Carro_UQ__1_-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnIniciarSesionEmpleado" layoutX="65.0" layoutY="130.0" mnemonicParsing="false" onAction="#onOpenMenuEmpleado" prefHeight="49.0" prefWidth="170.0" style="-fx-background-color: #187b3b;" text="Compra Vehículo" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="52.0" layoutY="21.0" text="Bienvenido Empleado ">
+         <font>
+            <Font name="System Bold Italic" size="27.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnIniciarSesionEmpleado1" layoutX="65.0" layoutY="199.0" mnemonicParsing="false" onAction="#onOpenMenuEmpleado" prefHeight="49.0" prefWidth="170.0" style="-fx-background-color: #187b3b;" text="Vender Vehículo" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnIniciarSesionEmpleado11" layoutX="65.0" layoutY="268.0" mnemonicParsing="false" onAction="#onOpenMenuEmpleado" prefHeight="49.0" prefWidth="170.0" style="-fx-background-color: #187b3b;" text="Alquilar Vehículo" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnIniciarSesionEmpleado111" layoutX="267.0" layoutY="268.0" mnemonicParsing="false" onAction="#onOpenMenuEmpleado" prefHeight="49.0" prefWidth="170.0" style="-fx-background-color: #187b3b;" text="Registro de Transacciones" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnIniciarSesionEmpleado12" layoutX="267.0" layoutY="199.0" mnemonicParsing="false" onAction="#onOpenMenuEmpleado" prefHeight="49.0" prefWidth="170.0" style="-fx-background-color: #187b3b;" text="Registrar Cliente" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnIniciarSesionEmpleado2" layoutX="267.0" layoutY="130.0" mnemonicParsing="false" onAction="#onOpenMenuEmpleado" prefHeight="49.0" prefWidth="170.0" style="-fx-background-color: #187b3b;" text="Registrar Vehículo" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="139.0" layoutY="91.0" text="¿Que quieres hacer hoy?">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

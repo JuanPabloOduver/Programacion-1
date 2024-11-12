@@ -15,17 +15,22 @@
       </Label>
       <ImageView fitHeight="303.0" fitWidth="309.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="https://drive.google.com/file/d/1WF-J9EOJbHg28LvHv_nMueWNCtBn54Ns/view?usp=sharing" />
+            <Image url="@../imagenes/LogoTuCarroUQ.png" />
          </image>
       </ImageView>
-      <Button fx:id="btnIngresarComoAdmin" layoutX="320.0" layoutY="184.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="256.0" style="-fx-background-color: #7ab98b;" text="Ingresar como Administrador">
+      <Button fx:id="btnIngresarComoAdmin" layoutX="320.0" layoutY="152.0" mnemonicParsing="false" onAction="#onOpenIngresarComoAdmin" prefHeight="58.0" prefWidth="256.0" style="-fx-background-color: #7ab98b;" text="Ingresar como Administrador">
          <font>
             <Font name="System Bold Italic" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="btnIngresarComoEmpleado" layoutX="320.0" layoutY="94.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="256.0" style="-fx-background-color: #7ab98b;" text="Ingresar como Empleado">
+      <Button fx:id="btnIngresarComoEmpleado" layoutX="320.0" layoutY="72.0" mnemonicParsing="false" onAction="#onOpenIngresarComoEmpleado" prefHeight="58.0" prefWidth="256.0" style="-fx-background-color: #7ab98b;" text="Ingresar como Empleado">
          <font>
             <Font name="System Bold Italic" size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnIngresarComoCliente" layoutX="320.0" layoutY="224.0" mnemonicParsing="false" onAction="#onOpenIngresarComoCliente" prefHeight="58.0" prefWidth="256.0" style="-fx-background-color: #7ab98b;" text="Ingresar como Cliente">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
          </font>
       </Button>
    </children>

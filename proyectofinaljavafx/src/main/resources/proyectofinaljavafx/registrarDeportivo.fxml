@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="835.0" prefWidth="1335.0" style="-fx-background-color: #e0e4ce;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6e9987" height="460.0" layoutX="27.0" layoutY="25.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1281.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6e9987" height="45.0" layoutX="524.0" layoutY="41.0" stroke="#114d4d" strokeType="INSIDE" width="308.0" />
+      <Label layoutX="527.0" layoutY="41.0" prefHeight="45.0" prefWidth="308.0" text="Registo de Deportivo:">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Label>
+      <ComboBox layoutX="339.0" layoutY="345.0" prefHeight="31.0" prefWidth="279.0" promptText="Seleccione el tipo de transmisión" />
+      <TableView layoutX="27.0" layoutY="498.0" prefHeight="323.0" prefWidth="1281.0" style="-fx-background-color: #e0e4ce;">
+         <columns>
+            <TableColumn prefWidth="75.0" text="Placa" />
+            <TableColumn prefWidth="75.0" text="Marca" />
+            <TableColumn prefWidth="75.0" text="Modelo" />
+            <TableColumn prefWidth="75.0" text="Estado" />
+            <TableColumn prefWidth="75.0" text="Velocidad Maxima" />
+            <TableColumn prefWidth="75.0" text="Cilindraje" />
+            <TableColumn prefWidth="75.0" text="Transmision" />
+            <TableColumn prefWidth="75.0" text="Combustible" />
+            <TableColumn prefWidth="75.0" text="Número Pasajeros" />
+            <TableColumn prefWidth="75.0" text="Número de Puertas" />
+            <TableColumn prefWidth="75.0" text="Número de Bolsas de Aire" />
+            <TableColumn prefWidth="75.0" text="Número de caballos de fuerza" />
+            <TableColumn prefWidth="75.0" text="En cuanto tiempo alcanza los 100 km" />
+         </columns>
+      </TableView>
+      <Label layoutX="264.0" layoutY="93.0" text="Placa:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="btnText" layoutX="339.0" layoutY="93.0" opacity="0.5" />
+      <TextField fx:id="btnText1" layoutX="339.0" layoutY="135.0" opacity="0.5" />
+      <Label layoutX="256.0" layoutY="135.0" text="Marca:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="btnText2" layoutX="339.0" layoutY="177.0" opacity="0.5" />
+      <Label layoutX="250.0" layoutY="177.0" text="Modelo:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="229.0" layoutY="300.0" text="Cilindraje:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="btnText21" layoutX="339.0" layoutY="301.0" opacity="0.5" />
+      <Label layoutX="129.0" layoutY="260.0" text="Velocidad Máxima:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="btnText11" layoutX="339.0" layoutY="261.0" opacity="0.5" />
+      <TextField fx:id="btnText3" layoutX="339.0" layoutY="221.0" opacity="0.5" />
+      <Label layoutX="257.0" layoutY="220.0" text="Estado:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="199.0" layoutY="344.0" text="Transimisión:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="199.0" layoutY="386.0" text="Combustible:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <ComboBox layoutX="339.0" layoutY="387.0" prefHeight="31.0" prefWidth="279.0" promptText="Seleccione el tipo de combustible" />
+      <Label layoutX="705.0" layoutY="95.0" text="Número Pasajeros: ">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="btnText2111" layoutX="913.0" layoutY="96.0" opacity="0.5" />
+      <TextField fx:id="btnText2112" layoutX="913.0" layoutY="136.0" opacity="0.5" />
+      <Label layoutX="705.0" layoutY="136.0" text="Número de Puertas:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="636.0" layoutY="174.0" text="Número de bolsas de aire:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="btnText21121" layoutX="913.0" layoutY="175.0" opacity="0.5" />
+      <Button fx:id="btnRegistrarVehiculo" layoutX="679.0" layoutY="425.0" mnemonicParsing="false" style="-fx-background-color: #114d4d;" text="Registrar Vehículo" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEliminarVehiculo" layoutX="868.0" layoutY="425.0" mnemonicParsing="false" style="-fx-background-color: #114d4d;" text="Eliminar Vehículo" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnLimpiar" layoutX="1048.0" layoutY="425.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="154.0" style="-fx-background-color: #114d4d;" text="Limpiar" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnVolver" layoutX="46.0" layoutY="32.0" mnemonicParsing="false" onAction="#onOpenRegistrarVehiculo" style="-fx-background-color: #6e9987;" text="Volver">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <Text fontSmoothingType="LCD" layoutX="35.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;" wrappingWidth="28.26123046875">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <TextField fx:id="btnText211211" layoutX="913.0" layoutY="256.0" opacity="0.5" />
+      <Label layoutX="550.0" layoutY="257.0" text="En cuanto tiempo alcanza los 100 km:">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="591.0" layoutY="217.0" text="Número de caballos de fuerza:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="btnText21122" layoutX="913.0" layoutY="217.0" opacity="0.5" />
+   </children>
+</AnchorPane>

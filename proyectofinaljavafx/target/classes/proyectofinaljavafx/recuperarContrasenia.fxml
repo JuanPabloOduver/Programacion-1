@@ -7,9 +7,9 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="382.0" prefWidth="502.0" style="-fx-background-color: #7ab98c;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="382.0" prefWidth="502.0" style="-fx-background-color: #e0e4ce;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="HARD_LIGHT" fill="WHITE" height="268.0" layoutX="52.0" layoutY="57.0" opacity="0.75" stroke="WHITE" strokeType="INSIDE" width="399.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="HARD_LIGHT" fill="#6e9987" height="268.0" layoutX="52.0" layoutY="57.0" opacity="0.75" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="399.0" />
       <TextField layoutX="246.0" layoutY="132.0" opacity="0.6" />
       <Label layoutX="101.0" layoutY="135.0" text="Nueva contraseña:">
          <font>
@@ -22,7 +22,7 @@
          </font>
       </Label>
       <TextField fx:id="txtContrasenia" layoutX="246.0" layoutY="177.0" opacity="0.6" />
-      <Button fx:id="btnRestablecerContrasenia" layoutX="135.0" layoutY="248.0" mnemonicParsing="false" onAction="#onOpenPrimary" prefHeight="49.0" prefWidth="242.0" style="-fx-background-color: #187b3b;" text="Restablecer Contraseña" textFill="WHITE">
+      <Button fx:id="btnRestablecerContrasenia" layoutX="135.0" layoutY="248.0" mnemonicParsing="false" onAction="#onOpenPrimary" prefHeight="49.0" prefWidth="242.0" style="-fx-background-color: #114d4d;" text="Restablecer Contraseña" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="15.0" />
          </font>
@@ -35,7 +35,7 @@
       <TextField layoutX="246.0" layoutY="85.0" opacity="0.6" />
       <ImageView fx:id="txtUsuario" fitHeight="114.0" fitWidth="118.0" layoutX="189.0" layoutY="-26.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../imagenes/Tu_Carro_UQ__1_-removebg-preview.png" />
+            <Image url="@../imagenes/Logo%20Tu%20Carro%20UQ%20sin%20fondo.png" />
          </image>
       </ImageView>
       <Text fontSmoothingType="LCD" layoutX="14.0" layoutY="359.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;" wrappingWidth="28.26123046875">
@@ -43,7 +43,7 @@
             <Font size="20.0" />
          </font>
       </Text>
-      <Button fx:id="btnVolver" layoutX="25.0" layoutY="337.0" mnemonicParsing="false" onAction="#onOpenPrimary" style="-fx-background-color: #7ab98c;" text="Volver">
+      <Button fx:id="btnVolver" layoutX="25.0" layoutY="337.0" mnemonicParsing="false" onAction="#onOpenPrimary" style="-fx-background-color: #e0e4ce;" text="Volver">
          <font>
             <Font name="System Bold Italic" size="15.0" />
          </font>

@@ -12,7 +12,7 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="HARD_LIGHT" fill="WHITE" height="263.0" layoutX="52.0" layoutY="73.0" opacity="0.75" stroke="WHITE" strokeType="INSIDE" width="399.0" />
       <ImageView fx:id="txtUsuario" fitHeight="135.0" fitWidth="134.0" layoutX="333.0" layoutY="-26.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../imagenes/Tu_Carro_UQ__1_-removebg-preview.png" />
+            <Image url="https://www.uniquindio.edu.co/info/uniquindio/media/bloque2.png" />
          </image>
       </ImageView>
       <Button fx:id="btnCompraVehiculo" layoutX="65.0" layoutY="130.0" mnemonicParsing="false" onAction="#onOpenCompraVehiculo" prefHeight="49.0" prefWidth="170.0" style="-fx-background-color: #187b3b;" text="Compra Vehículo" textFill="WHITE">

@@ -7,61 +7,60 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="382.0" prefWidth="536.0" style="-fx-background-color: #7ab98c;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="382.0" prefWidth="536.0" style="-fx-background-color: #e0e4ce;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="HARD_LIGHT" fill="WHITE" height="263.0" layoutX="62.0" layoutY="83.0" opacity="0.75" stroke="WHITE" strokeType="INSIDE" width="399.0" />
-      <Label layoutX="119.0" layoutY="83.0" text="¿Que vehículo quieres registrar?">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="HARD_LIGHT" fill="#6e9987" height="263.0" layoutX="62.0" layoutY="83.0" opacity="0.75" stroke="#6e9987" strokeType="INSIDE" width="399.0" />
+      <Label layoutX="119.0" layoutY="83.0" text="¿Que vehículo quieres registrar?" textFill="#2d3839">
          <font>
             <Font name="System Bold Italic" size="20.0" />
          </font>
       </Label>
-      <Button fx:id="btnRegistrarVehiculo" layoutX="277.0" layoutY="116.0" mnemonicParsing="false" onAction="#onOpenRegistrarVehiculo" prefHeight="49.0" prefWidth="170.0" style="-fx-background-color: #187b3b;" text="Registrar Vehículo" textFill="WHITE">
+      <Button fx:id="btnRegistrarVehiculo" layoutX="277.0" layoutY="116.0" mnemonicParsing="false" onAction="#onOpenRegistrarVehiculo" prefHeight="49.0" prefWidth="170.0" style="-fx-background-color: #114d4d;" text="Registrar Vehículo" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="btnRegistrarCliente" layoutX="277.0" layoutY="174.0" mnemonicParsing="false" onAction="#onOpenRegistrarCliente" prefHeight="49.0" prefWidth="170.0" style="-fx-background-color: #187b3b;" text="Registrar Cliente" textFill="WHITE">
+      <Button fx:id="btnRegistrarCliente" layoutX="277.0" layoutY="174.0" mnemonicParsing="false" onAction="#onOpenRegistrarCliente" prefHeight="49.0" prefWidth="170.0" style="-fx-background-color: #114d4d;" text="Registrar Cliente" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="btnRegistroTransacciones" layoutX="277.0" layoutY="229.0" mnemonicParsing="false" onAction="#onOpenRegistroTransacciones" prefHeight="49.0" prefWidth="170.0" style="-fx-background-color: #187b3b;" text="Registro de Transacciones" textFill="WHITE">
+      <Button fx:id="btnRegistroTransacciones" layoutX="277.0" layoutY="229.0" mnemonicParsing="false" onAction="#onOpenRegistroTransacciones" prefHeight="49.0" prefWidth="170.0" style="-fx-background-color: #114d4d;" text="Registro de Transacciones" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="btnAlquilarVehiculo" layoutX="75.0" layoutY="229.0" mnemonicParsing="false" onAction="#onOpenAlquilarVehiculo" prefHeight="49.0" prefWidth="170.0" style="-fx-background-color: #187b3b;" text="Alquilar Vehículo" textFill="WHITE">
+      <Button fx:id="btnAlquilarVehiculo" layoutX="75.0" layoutY="229.0" mnemonicParsing="false" onAction="#onOpenAlquilarVehiculo" prefHeight="49.0" prefWidth="170.0" style="-fx-background-color: #114d4d;" text="Alquilar Vehículo" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="btnVentaVehiculo" layoutX="75.0" layoutY="174.0" mnemonicParsing="false" onAction="#onOpenVentaVehiculo" prefHeight="49.0" prefWidth="170.0" style="-fx-background-color: #187b3b;" text="Vender Vehículo" textFill="WHITE">
+      <Button fx:id="btnVentaVehiculo" layoutX="75.0" layoutY="174.0" mnemonicParsing="false" onAction="#onOpenVentaVehiculo" prefHeight="49.0" prefWidth="170.0" style="-fx-background-color: #114d4d;" text="Vender Vehículo" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="15.0" />
          </font>
       </Button>
-      <Label layoutX="62.0" layoutY="31.0" text="Bienvenido Empleado ">
+      <Label layoutX="60.0" layoutY="40.0" prefHeight="39.0" prefWidth="283.0" text="Bienvenido Empleado " textFill="#2d3839">
          <font>
             <Font name="System Bold Italic" size="27.0" />
          </font>
       </Label>
-      <Button fx:id="btnCompraVehiculo" layoutX="75.0" layoutY="116.0" mnemonicParsing="false" onAction="#onOpenCompraVehiculo" prefHeight="49.0" prefWidth="170.0" style="-fx-background-color: #187b3b;" text="MOTO" textFill="WHITE">
+      <Button fx:id="btnCompraVehiculo" layoutX="75.0" layoutY="116.0" mnemonicParsing="false" onAction="#onOpenCompraVehiculo" prefHeight="49.0" prefWidth="170.0" style="-fx-background-color: #114d4d;" text="MOTO" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="15.0" />
          </font>
       </Button>
-      <ImageView fx:id="txtUsuario" fitHeight="135.0" fitWidth="502.0" layoutX="343.0" layoutY="-16.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="txtUsuario" fitHeight="135.0" fitWidth="502.0" layoutX="326.0" layoutY="-17.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../imagenes/Tu_Carro_UQ__1_-removebg-preview.png" />
+            <Image url="@../imagenes/Logo%20Tu%20Carro%20UQ%20sin%20fondo.png" />
          </image>
       </ImageView>
-      <Button fx:id="btnAlquilarVehiculo1" layoutX="75.0" layoutY="285.0" mnemonicParsing="false" onAction="#onOpenAlquilarVehiculo" prefHeight="49.0" prefWidth="170.0" style="-fx-background-color: #187b3b;" text="Alquilar Vehículo" textFill="WHITE">
+      <Button fx:id="btnAlquilarVehiculo1" layoutX="75.0" layoutY="285.0" mnemonicParsing="false" onAction="#onOpenAlquilarVehiculo" prefHeight="49.0" prefWidth="170.0" style="-fx-background-color: #114d4d;" text="Alquilar Vehículo" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="btnAlquilarVehiculo2" layoutX="277.0" layoutY="285.0" mnemonicParsing="false" onAction="#onOpenAlquilarVehiculo" prefHeight="49.0" prefWidth="170.0" style="-fx-background-color: #187b3b;" text="Alquilar Vehículo" textFill="WHITE">
+      <Button fx:id="btnAlquilarVehiculo2" layoutX="277.0" layoutY="285.0" mnemonicParsing="false" onAction="#onOpenAlquilarVehiculo" prefHeight="49.0" prefWidth="170.0" style="-fx-background-color: #114d4d;" text="Alquilar Vehículo" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="15.0" />
          </font>

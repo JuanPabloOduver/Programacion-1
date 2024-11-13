@@ -33,7 +33,7 @@
          </font>
       </Label>
       <TextField layoutX="246.0" layoutY="85.0" opacity="0.6" />
-      <ImageView fx:id="txtUsuario" fitHeight="114.0" fitWidth="118.0" layoutX="189.0" layoutY="-26.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="txtUsuario" fitHeight="114.0" fitWidth="118.0" layoutX="199.0" layoutY="-26.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../imagenes/Logo%20Tu%20Carro%20UQ%20sin%20fondo.png" />
          </image>

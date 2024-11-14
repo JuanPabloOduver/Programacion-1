@@ -7,14 +7,14 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="382.0" prefWidth="536.0" style="-fx-background-color: #e0e4ce;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="426.0" prefWidth="536.0" style="-fx-background-color: #e0e4ce;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fx:id="txtUsuario" fitHeight="135.0" fitWidth="502.0" layoutX="326.0" layoutY="-17.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../imagenes/Logo%20Tu%20Carro%20UQ%20sin%20fondo.png" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="HARD_LIGHT" fill="#6e9987" height="263.0" layoutX="62.0" layoutY="83.0" opacity="0.75" stroke="#6e9987" strokeType="INSIDE" width="399.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="HARD_LIGHT" fill="#6e9987" height="324.0" layoutX="62.0" layoutY="83.0" opacity="0.75" stroke="#6e9987" strokeType="INSIDE" width="399.0" />
       <Label layoutX="119.0" layoutY="83.0" text="¿Que vehículo quieres registrar?" textFill="#2d3839">
          <font>
             <Font name="System Bold Italic" size="20.0" />
@@ -75,5 +75,15 @@
             <Font size="20.0" />
          </font>
       </Text>
+      <Button fx:id="btnRegistrarCamion1" layoutX="278.0" layoutY="345.0" mnemonicParsing="false" onAction="#onOpenRegistrarCamion" prefHeight="49.0" prefWidth="170.0" style="-fx-background-color: #114d4d;" text="ELÉCTRICO" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnRegistrarCamioneta1" layoutX="76.0" layoutY="345.0" mnemonicParsing="false" onAction="#onOpenRegistrarCamioneta" prefHeight="49.0" prefWidth="170.0" style="-fx-background-color: #114d4d;" text="HÍBRIDO" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

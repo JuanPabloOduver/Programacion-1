@@ -39,7 +39,7 @@ public class Persona {
      */
     @Override
     public String toString() {
-        return super.toString() + ", nombre = " + nombre + ", apellidos = " + apellidos + ", email = " + email + ", cedula = " + cedula + ", edad = " + edad ;
+        return getClass().getSimpleName() + " = nombre = " + nombre + ", apellidos = " + apellidos + ", email = " + email + ", cedula = " + cedula + ", edad = " + edad ;
     }
 
     //----------------------------------------------------------------------------------------------//

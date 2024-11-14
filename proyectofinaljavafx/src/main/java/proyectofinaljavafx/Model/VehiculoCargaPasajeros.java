@@ -15,31 +15,31 @@ public class VehiculoCargaPasajeros extends Vehiculo{
     //----------------------------------------------------------------------------------------------//
     
     //Métodos de la clase
-    
+
     /**
      * Método constructor de la clase
-     * @param placa
-     * @param marca
-     * @param modelo
-     * @param estado
-     * @param velocidadMaxima
-     * @param cilindraje
-     * @param transmision
-     * @param combustible
      * @param abs
      * @param aireAcondicionado
      * @param camaraReversa
      * @param numPasajeros
-     * @param capacidad 
+     * @param capacidad
+     * @param placa
+     * @param marca
+     * @param estado
+     * @param modelo
+     * @param disponibilidad
+     * @param velocidadMaxima
+     * @param cilindraje
+     * @param transmision
+     * @param combustible 
      */
-    public VehiculoCargaPasajeros(String placa,String marca,String modelo, Estado estado, double velocidadMaxima , double cilindraje, Transmision transmision, Combustible combustible,boolean abs, boolean aireAcondicionado,boolean camaraReversa,int numPasajeros,double capacidad){
-        super(placa,marca, modelo, estado, velocidadMaxima, cilindraje, transmision,combustible);
-        
-        this.abs=abs;
-        this.aireAcondicionado=aireAcondicionado;
-        this.camaraReversa=camaraReversa;
-        this.numPasajeros=numPasajeros;
-        this.capacidad=capacidad;
+    public VehiculoCargaPasajeros(boolean abs, boolean aireAcondicionado, boolean camaraReversa, int numPasajeros, double capacidad, String placa, String marca, Estado estado, String modelo, double velocidadMaxima, double cilindraje, Transmision transmision, Combustible combustible) {
+        super(placa, marca, estado, modelo, velocidadMaxima, cilindraje, transmision, combustible);
+        this.abs = abs;
+        this.aireAcondicionado = aireAcondicionado;
+        this.camaraReversa = camaraReversa;
+        this.numPasajeros = numPasajeros;
+        this.capacidad = capacidad;
     }
     
     /**

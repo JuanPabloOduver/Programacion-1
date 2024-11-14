@@ -10,11 +10,7 @@ public class Empleado extends Persona{
     //Atributos de la clase
     
     private int numVehiculosVendidos,numVehiculosAlquilados,numVehiculosComprados,numClientesCreados;
-    private double salario;
-    private LinkedList<Cliente> clientesCreados;
-    private LinkedList<Alquiler> vehiculosAlquilados;
-    private LinkedList<Compra> vehiculosComprados;
-    private LinkedList<Venta> vehiculosVendidos;    
+    private LinkedList<Cliente> clientesCreados;  
     private LinkedList<AccionesVehiculo> historialTransaccionesVehiculos;
     
     //----------------------------------------------------------------------------------------------//
@@ -33,43 +29,67 @@ public class Empleado extends Persona{
     public Empleado(String nombre, String apellidos, String cedula,String contraseña,int edad){
         super(nombre, apellidos, cedula, cedula,contraseña, edad);
         
-        salario=0;
         numVehiculosAlquilados=0;
         numVehiculosComprados=0;
         numVehiculosVendidos=0;
+        numClientesCreados=0;
         
-        vehiculosVendidos=new LinkedList<>();
-        vehiculosAlquilados=new LinkedList<>();
-        vehiculosComprados=new LinkedList<>();
         clientesCreados=new LinkedList<>();
     }
 
+    /**
+     * Método que modifica el estado de el tramite almacenado en los datos para referenciar que se devolvió el alquiler
+     * @param codigoTramite 
+     */
+    public void devolverAlquiler(String codigoTramite){
+        for (AccionesVehiculo tramite : historialTransaccionesVehiculos) {
+            if(tramite.getCodigoTramite().equals(codigoTramite)){
+                
+                tramite.setEstadoTramite(EstadoTramite.ALQUILER_REGRESADO);
+                
+            }
+        }
+    }
+    
+    
+    /**
+     * Método que añade un vehículo vendido en las listas del empleado y aumenta su contador.
+     * @param vehiculoVendido 
+     */
     public void VehiculoVendido(Venta vehiculoVendido){
-        vehiculosVendidos.add(vehiculoVendido);
         historialTransaccionesVehiculos.add(vehiculoVendido);
-        this.salario+= vehiculoVendido.getCostoAccion();
         numVehiculosVendidos++;
+        
     }
     
+    /**
+     * Método que añade un vehículo alquilado en las listas del empleado y aumenta su contador.
+     * @param vehiculoAlquilado 
+     */
     public void VehiculoAlquilado(Alquiler vehiculoAlquilado){
-        vehiculosAlquilados.add(vehiculoAlquilado);
+        vehiculoAlquilado.getVehiculo().setDisponibilidad(Disponibilidad.VEHICULO_ALQUILADO);
         historialTransaccionesVehiculos.add(vehiculoAlquilado);        
-        this.salario+= vehiculoAlquilado.getCostoAccion();
         numVehiculosAlquilados++;
+        
     }
     
+    /**
+     * Método que añade un vehículo comprado en las listas del empleado y aumenta su contador.
+     * @param vehiculoComprado 
+     */
     public void VehiculoComprado(Compra vehiculoComprado){
-        vehiculosComprados.add(vehiculoComprado);
         historialTransaccionesVehiculos.add(vehiculoComprado);        
-        this.salario+= vehiculoComprado.getCostoAccion();
-        numVehiculosComprados++;
+        numVehiculosComprados++;     
     }
     
-    public void CrearClientes(Cliente cliente){
+    /**
+     * Método que añade los clientes en la lista del empleado y aumenta su contador
+     * @param cliente 
+     */
+    public void añadirClientes(Cliente cliente){
         clientesCreados.add(cliente);
         numClientesCreados++;
     }
-    
 
     /**
      * Método que muestra el valor de cada dato
@@ -77,21 +97,13 @@ public class Empleado extends Persona{
      */
     @Override
     public String toString() {
-        return super.toString() + ", salario = " + salario;
+        return super.toString();
     }
     
     //----------------------------------------------------------------------------------------------//
     //----------------------------------------------------------------------------------------------//
    
     //Métodos Getters and Setters
-    
-    public double getSalario() {
-        return salario;
-    }
-
-    public void setSalario(double salario) {
-        this.salario = salario;
-    }
 
     public LinkedList<Cliente> getClientesCreados() {
         return clientesCreados;
@@ -101,38 +113,46 @@ public class Empleado extends Persona{
         this.clientesCreados = clientesCreados;
     }
 
-    public LinkedList<Alquiler> getVehiculosAlquilados() {
-        return vehiculosAlquilados;
+    public int getNumVehiculosVendidos() {
+        return numVehiculosVendidos;
     }
 
-    public void setVehiculosAlquilados(LinkedList<Alquiler> vehiculosAlquilados) {
-        this.vehiculosAlquilados = vehiculosAlquilados;
+    public void setNumVehiculosVendidos(int numVehiculosVendidos) {
+        this.numVehiculosVendidos = numVehiculosVendidos;
     }
 
-    public LinkedList<Compra> getVehiculosComprados() {
-        return vehiculosComprados;
+    public int getNumVehiculosAlquilados() {
+        return numVehiculosAlquilados;
     }
 
-    public void setVehiculosComprados(LinkedList<Compra> vehiculosComprados) {
-        this.vehiculosComprados = vehiculosComprados;
+    public void setNumVehiculosAlquilados(int numVehiculosAlquilados) {
+        this.numVehiculosAlquilados = numVehiculosAlquilados;
     }
 
-    public LinkedList<Venta> getVehiculosVendidos() {
-        return vehiculosVendidos;
+    public int getNumVehiculosComprados() {
+        return numVehiculosComprados;
     }
 
-    public void setVehiculosVendidos(LinkedList<Venta> vehiculosVendidos) {
-        this.vehiculosVendidos = vehiculosVendidos;
+    public void setNumVehiculosComprados(int numVehiculosComprados) {
+        this.numVehiculosComprados = numVehiculosComprados;
     }
 
-    public LinkedList<AccionesVehiculo> getHistorialAccionesVehiculos() {
-        return historialAccionesVehiculos;
+    public int getNumClientesCreados() {
+        return numClientesCreados;
     }
 
-    public void setHistorialAccionesVehiculos(LinkedList<AccionesVehiculo> historialAccionesVehiculos) {
-        this.historialAccionesVehiculos = historialAccionesVehiculos;
+    public void setNumClientesCreados(int numClientesCreados) {
+        this.numClientesCreados = numClientesCreados;
     }
-    
+
+    public LinkedList<AccionesVehiculo> getHistorialTransaccionesVehiculos() {
+        return historialTransaccionesVehiculos;
+    }
+
+    public void setHistorialTransaccionesVehiculos(LinkedList<AccionesVehiculo> historialTransaccionesVehiculos) {
+        this.historialTransaccionesVehiculos = historialTransaccionesVehiculos;
+    }
+
     //----------------------------------------------------------------------------------------------//
     //----------------------------------------------------------------------------------------------//
     

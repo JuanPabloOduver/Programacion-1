@@ -1,9 +1,10 @@
 package proyectofinaljavafx.Model;
 
-public enum Estado {
+public enum Disponibilidad {
     
     //Valores de la ennumeración
     
-    NUEVO,USADO
+    VEHICULO_DISPONIBLE,
+    VEHICULO_ALQUILADO    
     
 }

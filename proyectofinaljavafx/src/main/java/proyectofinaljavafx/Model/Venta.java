@@ -20,14 +20,13 @@ public class Venta extends AccionesVehiculo{
      * @param vehiculo
      * @param empleado
      * @param cliente
-     * @param CostoAccion 
+     * @param codigoTramite 
      */
-    public Venta(int cuotaIntereses, Vehiculo vehiculo, Empleado empleado, Cliente cliente, double CostoAccion) {
-        super(vehiculo, empleado, cliente, CostoAccion);
-        
+    public Venta(int cuotaIntereses, Vehiculo vehiculo, Empleado empleado, Cliente cliente, String codigoTramite) {
+        super(vehiculo, empleado, cliente, codigoTramite);
         this.cuotaIntereses = cuotaIntereses;
     }
-       
+
     /**
      * Método que muestra el valor de cada dato
      * @return 
@@ -42,13 +41,14 @@ public class Venta extends AccionesVehiculo{
     
     //Métodos Getters and Setters
     
-    public int getcuotaIntereses() {
+    public int getCuotaIntereses() {
         return cuotaIntereses;
     }
 
-    public void setcuotaIntereses(int cuotaIntereses) {
+    public void setCuotaIntereses(int cuotaIntereses) {
         this.cuotaIntereses = cuotaIntereses;
     }
+    
     
     //----------------------------------------------------------------------------------------------//
     //----------------------------------------------------------------------------------------------//

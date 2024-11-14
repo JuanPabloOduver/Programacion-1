@@ -10,7 +10,8 @@ public class AccionesVehiculo {
     private Vehiculo vehiculo;
     private Empleado empleado;
     private Cliente cliente;
-    private double CostoAccion;
+    private String codigoTramite;
+    private EstadoTramite estadoTramite;
     
     //----------------------------------------------------------------------------------------------//
     //----------------------------------------------------------------------------------------------//
@@ -24,11 +25,12 @@ public class AccionesVehiculo {
      * @param cliente
      * @param CostoAccion 
      */
-    public AccionesVehiculo(Vehiculo vehiculo, Empleado empleado, Cliente cliente, double CostoAccion) {
+    public AccionesVehiculo(Vehiculo vehiculo, Empleado empleado, Cliente cliente, String codigoTramite) {
         this.vehiculo = vehiculo;
         this.empleado = empleado;
         this.cliente = cliente;
-        this.CostoAccion = CostoAccion;
+        this.codigoTramite= codigoTramite;
+        estadoTramite=estadoTramite.SELECCIONE_ESTADO;
     }
     
     /**
@@ -37,7 +39,7 @@ public class AccionesVehiculo {
      */
     @Override
     public String toString() {
-        return getClass() + "= Vehículo = " + vehiculo + ", empleado = " + empleado + ", cliente = " + cliente + ", Costo de la accion = " + CostoAccion ;
+        return getClass().getSimpleName() + "= Vehículo = " + vehiculo + ", empleado = " + empleado + ", cliente = " + cliente  +", estado del tramite = " +estadoTramite+", còdigo del tramite: " + codigoTramite;
     }
     
     //----------------------------------------------------------------------------------------------//
@@ -69,12 +71,16 @@ public class AccionesVehiculo {
         this.cliente = cliente;
     }
 
-    public double getCostoAccion() {
-        return CostoAccion;
+    public String getCodigoTramite(){
+        return codigoTramite;
     }
 
-    public void setCostoAccion(double CostoAccion) {
-        this.CostoAccion = CostoAccion;
+    public void setEstadoTramite(EstadoTramite estadoTramite) {
+        this.estadoTramite = estadoTramite;
+    }
+
+    public EstadoTramite getEstadoTramite(){
+        return estadoTramite;
     }
 
     //----------------------------------------------------------------------------------------------//

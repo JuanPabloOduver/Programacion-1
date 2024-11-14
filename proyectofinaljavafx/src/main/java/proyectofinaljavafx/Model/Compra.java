@@ -13,20 +13,20 @@ public class Compra extends AccionesVehiculo{
     //----------------------------------------------------------------------------------------------//
     
     //Métodos de la clase
-    
+
     /**
      * Método constructor de la clase
      * @param codigoCompra
      * @param vehiculo
      * @param empleado
      * @param cliente
-     * @param CostoAccion 
+     * @param codigoTramite 
      */
-    public Compra(String codigoCompra, Vehiculo vehiculo, Empleado empleado, Cliente cliente, double CostoAccion) {   
-    super(vehiculo, empleado, cliente, CostoAccion);
+    public Compra(String codigoCompra, Vehiculo vehiculo, Empleado empleado, Cliente cliente, String codigoTramite) {
+        super(vehiculo, empleado, cliente, codigoTramite);
         this.codigoCompra = codigoCompra;
     }
-    
+
     /**
      * Método que muestra el valor de cada dato
      * @return 

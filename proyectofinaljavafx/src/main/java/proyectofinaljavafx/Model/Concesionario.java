@@ -10,13 +10,12 @@ public class Concesionario {
     //Atributos de la clase
     
     private String nombre, direccion;
-    private LinkedList<Empleado> empleados;
+    private LinkedList<Empleado> empleadosContratados;
     private LinkedList<Cliente> clientes;
     private LinkedList<Vehiculo> vehiculos;
-    private LinkedList<Administrador> administradores;
-    private double InteresXCuota=0.3;
-    private double ganancias=0;
-
+    private Administrador administrador;
+    private LinkedList<AccionesVehiculo> tramites ;
+    
     //----------------------------------------------------------------------------------------------//
     //----------------------------------------------------------------------------------------------//
     
@@ -31,17 +30,49 @@ public class Concesionario {
     public Concesionario(String nombre, String direccion) {
         this.nombre = nombre;
         this.direccion = direccion;
-        empleados = new LinkedList<>();
+
+        administrador = new Administrador("Johan Sebastian", "Echeverry Ibarra", "johans.echeverrii@uqvirtual.edu.co", "1097722436" ,"manzana1", 18);
+        empleadosContratados = new LinkedList<>();
         clientes = new LinkedList<>();
         vehiculos = new LinkedList<>();
-        administradores = new LinkedList<>();
+        tramites = new LinkedList<>();
+
     }
 
     //----------------------------------------------------------------------------------------------//
     
     //Métodos de verificación/Busqueda
     
-    public LinkedList<Vehiculo> buscarvehiculos;
+//     public static List<Vehiculo> filtrarVehiculos(List<Vehiculo> vehiculos, String modeloBuscado, Boolean tieneAireAcondicionado) {
+//        List<Vehiculo> vehiculosFiltrados = new ArrayList<>();
+//        for (Vehiculo v : vehiculos) {
+//            // Filtra por el modelo, si se proporciona
+//            boolean coincideModelo = modeloBuscado == null || v.getModelo().equalsIgnoreCase(modeloBuscado);
+//            // Si tieneAireAcondicionado es null, no filtra por aire acondicionado
+//            boolean coincideAireAcondicionado = (tieneAireAcondicionado == null) || (v.getA() == tieneAireAcondicionado);
+//            // Solo agregar el vehículo si cumple con ambos filtros
+//            if (coincideModelo && coincideAireAcondicionado) {
+//                vehiculosFiltrados.add(v);
+//            }
+//        }
+//        return vehiculosFiltrados;
+//    }
+    
+    /**
+     * Método que busca un vehiculo en el listado de la empresa con una placa
+     * @param placa
+     * @return mensaje
+     */
+    public String buscarPlacaVehiculo(String placa){
+        String mensaje="No hay un vehiculo con la placa: " + placa;
+            for (Vehiculo vehiculo : vehiculos) {
+                if(vehiculo.getPlaca().equals(placa)){
+                    mensaje="El vehículo de la placa " + placa + " es: " + vehiculo;
+                }
+            }
+        return mensaje;
+    }
+    
     
     /**
      * Método que verifica si un empleado está registrado en la empresa
@@ -52,7 +83,7 @@ public class Concesionario {
     public boolean verificarEmpleado(String cedula) {
         boolean c = false;
 
-        for (Empleado empleado : empleados) {
+        for (Empleado empleado : empleadosContratados) {
             if (empleado.getCedula().equals(cedula)) {
                 c = true;
             }
@@ -85,11 +116,9 @@ public class Concesionario {
      */
     public boolean verificarAdministrador(String cedula) {
         boolean c = false;
-
-        for (Administrador administrador : administradores) {
-            if (administrador.getCedula().equals(cedula)) {
-                c = true;
-            }
+        
+        if (administrador.getCedula().equals(cedula)) {
+            c = true;
         }
         return c;
     }
@@ -97,7 +126,7 @@ public class Concesionario {
     /**
      * Método que verifica si un cliente está registrado en la empresa
      *
-     * @param emails
+     * @param email
      * @return c
      */
     public boolean verificarCliente(String email) {
@@ -105,6 +134,23 @@ public class Concesionario {
 
         for (Cliente cliente : clientes) {
             if (cliente.getEmail().equals(email)) {
+                c = true;
+            }
+        }
+        return c;
+    }
+
+    /**
+     * Método que verifica si un tràmite está registrado en la lista de tramites de la empresa
+     *
+     * @param codigoTramite
+     * @return c
+     */
+    public boolean verificarTramite(String codigoTramite) {
+        boolean c = false;
+
+        for (AccionesVehiculo accion : tramites) {
+            if (accion.getCodigoTramite().equals(codigoTramite)) {
                 c = true;
             }
         }
@@ -122,7 +168,7 @@ public class Concesionario {
      */
     public void registrarEmpleado(Empleado empleado) {
         if (!verificarEmpleado(empleado.getCedula())) {
-            empleados.add(empleado);
+            empleadosContratados.add(empleado);
         }
     }
 
@@ -133,33 +179,98 @@ public class Concesionario {
      */
     public void bloquearEmpleado(String cedula) {
         if (verificarEmpleado(cedula)) {
-            for (Empleado empleado : empleados) {
+            for (Empleado empleado : empleadosContratados) {
                 if (empleado.getCedula().equals(cedula)) {
-                    empleados.remove(empleado);
+                    empleadosContratados.remove(empleado);
+                }
+            }
+        }
+    }
+    
+    /**
+     * Método que devuelve el vehiculo alquilado modificando el estado en las listas de admin, empleado, y de la empresa
+     * @param codigoTramite 
+     */
+    public void devolverAlquiler(String codigoTramite){
+        if(verificarTramite(codigoTramite)){
+            for (AccionesVehiculo tramite : tramites) {
+                if(tramite.getCodigoTramite().equals(codigoTramite)){
+                    
+                    tramite.getEmpleado().devolverAlquiler(codigoTramite);
+                    administrador.devolverAlquiler(codigoTramite);
+                    tramite.setEstadoTramite(EstadoTramite.ALQUILER_REGRESADO);
                 }
             }
         }
     }
 
     /**
-     * Método que registra un vehiculo en los datos de la empresa
+     * Método que registra un vehiculo comprado en los datos de la empresa en caso de que no haya un vehiculo con placa similar ni un tramite con còdigo similar
      *
-     * @param vehiculo
+     * @param vehiculoComprado
      */
-    public void registrarVehiculo(Vehiculo vehiculo) {
-        if (!verificarVehiculo(vehiculo.getPlaca())) {
+    public void registrarVehiculoComprado(Compra vehiculoComprado) {
+        Vehiculo vehiculo= vehiculoComprado.getVehiculo();
+        String placavehiculo= vehiculo.getPlaca();
+        Empleado empleado= vehiculoComprado.getEmpleado();
+
+        if (!verificarVehiculo(placavehiculo) &&  !verificarTramite(vehiculoComprado.getCodigoTramite())) {
             vehiculos.add(vehiculo);
+            
+            vehiculoComprado.setEstadoTramite(EstadoTramite.VEHICULO_COMPRADO);
+            
+            empleado.VehiculoComprado(vehiculoComprado);
+            tramites.add(vehiculoComprado);
+            administrador.añadirTramites(vehiculoComprado);
+        }else{
+            System.out.println("No se puede crear el tramite por que ya hay uno con el mismo còdigo o un coche con la misma placa.");
         }
     }
 
     /**
-     * Método que registra un administrador en los datos de la empresa
+     * Método que registra un vehiculo alquilado en los datos de la empresa en caso de que  haya un vehiculo con placa similar y con un tramite con còdigo ùnico.
      *
-     * @param administrador
+     * @param vehiculoAlquilado
      */
-    public void registrarAdministrador(Administrador admin) {
-        if (!verificarEmpleado(admin.getCedula())) {
-            administradores.add(admin);
+    public void registrarVehiculoAlquilado(Alquiler vehiculoAlquilado) {
+        Vehiculo vehiculo= vehiculoAlquilado.getVehiculo();
+        String placavehiculo= vehiculo.getPlaca();
+        Empleado empleado= vehiculoAlquilado.getEmpleado();
+
+        if (verificarVehiculo(placavehiculo) && !verificarTramite(vehiculoAlquilado.getCodigoTramite())) {
+            
+            vehiculo.setDisponibilidad(Disponibilidad.VEHICULO_ALQUILADO);
+            
+            vehiculoAlquilado.setEstadoTramite(EstadoTramite.VEHICULO_ALQUILADO);
+            
+            empleado.VehiculoAlquilado(vehiculoAlquilado);
+            tramites.add(vehiculoAlquilado);
+            administrador.añadirTramites(vehiculoAlquilado);
+        }else{
+            System.out.println("No se puede crear el tramite por que ya hay uno con el mismo còdigo o no se encuentra la placa del coche.");
+        }
+    }
+
+    /**
+     * Método que registra un vehiculo comprado en los datos de la empresa en caso de que no haya un vehiculo con placa similar ni un tramite con còdigo similar
+     *
+     * @param vehiculoVendido
+     */
+    public void registrarVehiculoVendido(Venta vehiculoVendido) {
+        Vehiculo vehiculo= vehiculoVendido.getVehiculo();
+        String placavehiculo= vehiculo.getPlaca();
+        Empleado empleado= vehiculoVendido.getEmpleado();
+
+        if (verificarVehiculo(placavehiculo) &&  !verificarTramite(vehiculoVendido.getCodigoTramite())) {
+            vehiculos.remove(vehiculo);
+            
+            vehiculoVendido.setEstadoTramite(EstadoTramite.VEHICULO_VENDIDO);
+            
+            empleado.VehiculoVendido(vehiculoVendido);
+            tramites.add(vehiculoVendido);
+            administrador.añadirTramites(vehiculoVendido);           
+        }else{
+            System.out.println("No se puede crear el tramite por que ya hay uno con el mismo còdigo o no hay un coche con la placa ingresada.");
         }
     }
 
@@ -185,9 +296,9 @@ public class Concesionario {
      */
     public void eliminarEmpleado(String cedula) {
         if (verificarEmpleado(cedula)) {
-            for (Empleado empleado : empleados) {
+            for (Empleado empleado : empleadosContratados) {
                 if (empleado.getCedula().equals(cedula)) {
-                    empleados.remove(empleado);
+                    empleadosContratados.remove(empleado);
                 }
             }
         }
@@ -209,21 +320,6 @@ public class Concesionario {
     }
 
     /**
-     * Método que elimina un administrador en los datos de la empresa
-     *
-     * @param cedula
-     */
-    public void eliminarAdministrador(String cedula) {
-        if (verificarAdministrador(cedula)) {
-            for (Administrador administrador : administradores) {
-                if (administrador.getCedula().equals(cedula)) {
-                    administradores.remove(administrador);
-                }
-            }
-        }
-    }
-
-    /**
      * Método que elimina un cliente en los datos de la empresa
      *
      * @param cedula
@@ -237,7 +333,7 @@ public class Concesionario {
             }
         }
     }
-
+    
     //----------------------------------------------------------------------------------------------//
     
     /**
@@ -247,7 +343,7 @@ public class Concesionario {
      */
     @Override
     public String toString() {
-        return "Concesionario = " + " Nombre = " + nombre + ", dirección = " + direccion + ", empleados = " + empleados + ", clientes = " + clientes + ", vehiculos = " + vehiculos;
+        return "Concesionario = " + " Nombre = " + nombre + ", dirección = " + direccion + ", empleados = " + empleadosContratados + ", clientes = " + clientes + ", vehiculos = " + vehiculos;
     }
 
     //----------------------------------------------------------------------------------------------//
@@ -272,11 +368,11 @@ public class Concesionario {
     }
 
     public LinkedList<Empleado> getEmpleados() {
-        return empleados;
+        return empleadosContratados;
     }
 
     public void setEmpleados(LinkedList<Empleado> empleados) {
-        this.empleados = empleados;
+        this.empleadosContratados = empleados;
     }
 
     public LinkedList<Cliente> getUsuarios() {

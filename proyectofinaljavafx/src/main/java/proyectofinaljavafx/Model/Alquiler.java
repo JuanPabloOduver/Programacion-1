@@ -7,21 +7,24 @@ public class Alquiler extends AccionesVehiculo{
     
     //Atributos de la clase
     
-    private int diasAlquiler;
+    private String codigoDevolucion;
     
     //----------------------------------------------------------------------------------------------//
     //----------------------------------------------------------------------------------------------//
     
     //Métodos de la clase
-    
+
     /**
      * Método constructor de la clase
-     * @param diasAlquiler
-                                                                                                                                                                                                                                                                                         */
-    public Alquiler(Empleado empleado, Cliente cliente, Vehiculo vehiculo, int diasAlquiler , double costo){
-        super(vehiculo, empleado, cliente, costo);
-        
-        this.diasAlquiler=diasAlquiler;
+     * @param codigoDevolucion
+     * @param vehiculo
+     * @param empleado
+     * @param cliente
+     * @param codigoTramite 
+     */
+    public Alquiler(String codigoDevolucion, Vehiculo vehiculo, Empleado empleado, Cliente cliente, String codigoTramite) {
+        super(vehiculo, empleado, cliente, codigoTramite);
+        this.codigoDevolucion = codigoDevolucion;
     }
     
     /**
@@ -30,7 +33,7 @@ public class Alquiler extends AccionesVehiculo{
      */
         @Override
     public String toString() {
-        return super.toString() + ", dias que dura el alquiler = " + diasAlquiler  ;
+        return super.toString() + ", código para devolver el alquiler = " + codigoDevolucion  ;
     }
     
     //----------------------------------------------------------------------------------------------//
@@ -38,12 +41,12 @@ public class Alquiler extends AccionesVehiculo{
     
     //Métodos Getters and Setters
 
-    public int getDiasAlquiler() {
-        return diasAlquiler;
+    public String getCodigoDevolucion() {
+        return codigoDevolucion;
     }
 
-    public void setDiasAlquiler(int diasAlquiler) {
-        this.diasAlquiler = diasAlquiler;
+    public void setCodigoDevolucion(String codigoDevolucion) {
+        this.codigoDevolucion = codigoDevolucion;
     }
 
     //----------------------------------------------------------------------------------------------//

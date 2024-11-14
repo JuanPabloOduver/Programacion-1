@@ -14,7 +14,7 @@ public class Deportivo extends Vehiculo {
     //----------------------------------------------------------------------------------------------//
     
     //Métodos de la clase
-    
+
     /**
      * Método constructor de la clase
      * @param numPasajeros
@@ -24,15 +24,16 @@ public class Deportivo extends Vehiculo {
      * @param tiempoAlcanza100Km
      * @param placa
      * @param marca
-     * @param modelo
      * @param estado
+     * @param modelo
+     * @param disponibilidad
      * @param velocidadMaxima
      * @param cilindraje
      * @param transmision
      * @param combustible 
      */
-    public Deportivo(int numPasajeros, int numPuertas, int numBolsasAire, int numCaballosFuerza, double tiempoAlcanza100Km, String placa, String marca, String modelo, Estado estado, double velocidadMaxima, double cilindraje, Transmision transmision, Combustible combustible) {
-        super(placa, marca, modelo, estado, velocidadMaxima, cilindraje, transmision, combustible);
+    public Deportivo(int numPasajeros, int numPuertas, int numBolsasAire, int numCaballosFuerza, double tiempoAlcanza100Km, String placa, String marca, Estado estado, String modelo, double velocidadMaxima, double cilindraje, Transmision transmision, Combustible combustible) {
+        super(placa, marca, estado, modelo, velocidadMaxima, cilindraje, transmision, combustible);
         this.numPasajeros = numPasajeros;
         this.numPuertas = numPuertas;
         this.numBolsasAire = numBolsasAire;

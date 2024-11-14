@@ -14,7 +14,7 @@ public class Camioneta extends VehiculoCargaPasajeros {
     //----------------------------------------------------------------------------------------------//
     
     //Métodos de la clase
-    
+
     /**
      * Método constructor de la clase
      * @param numPuertas
@@ -24,22 +24,23 @@ public class Camioneta extends VehiculoCargaPasajeros {
      * @param sensorTraficoCruzado
      * @param asistentePermanenciaCarril
      * @param es4x4
-     * @param placa
-     * @param marca
-     * @param modelo
-     * @param estado
-     * @param velocidadMaxima
-     * @param cilindraje
-     * @param transmision
-     * @param combustible
      * @param abs
      * @param aireAcondicionado
      * @param camaraReversa
      * @param numPasajeros
      * @param capacidad
+     * @param placa
+     * @param marca
+     * @param estado
+     * @param modelo
+     * @param disponibilidad
+     * @param velocidadMaxima
+     * @param cilindraje
+     * @param transmision
+     * @param combustible 
      */
-    public Camioneta(int numPuertas, int numBolsasAire, boolean velocidadCrucero, boolean sensorColision, boolean sensorTraficoCruzado, boolean asistentePermanenciaCarril, boolean es4x4, String placa, String marca, String modelo, Estado estado, double velocidadMaxima, double cilindraje, Transmision transmision, Combustible combustible, boolean abs, boolean aireAcondicionado, boolean camaraReversa, int numPasajeros, double capacidad) {
-        super(placa, marca, modelo, estado, velocidadMaxima, cilindraje, transmision, combustible, abs, aireAcondicionado, camaraReversa, numPasajeros, capacidad);
+    public Camioneta(int numPuertas, int numBolsasAire, boolean velocidadCrucero, boolean sensorColision, boolean sensorTraficoCruzado, boolean asistentePermanenciaCarril, boolean es4x4, boolean abs, boolean aireAcondicionado, boolean camaraReversa, int numPasajeros, double capacidad, String placa, String marca, Estado estado, String modelo, double velocidadMaxima, double cilindraje, Transmision transmision, Combustible combustible) {
+        super(abs, aireAcondicionado, camaraReversa, numPasajeros, capacidad, placa, marca, estado, modelo, velocidadMaxima, cilindraje, transmision, combustible);
         this.numPuertas = numPuertas;
         this.numBolsasAire = numBolsasAire;
         this.velocidadCrucero = velocidadCrucero;
@@ -48,7 +49,7 @@ public class Camioneta extends VehiculoCargaPasajeros {
         this.asistentePermanenciaCarril = asistentePermanenciaCarril;
         this.es4x4 = es4x4;
     }
-
+    
     /**
      * Método que muestra el valor de cada dato
      * @return 

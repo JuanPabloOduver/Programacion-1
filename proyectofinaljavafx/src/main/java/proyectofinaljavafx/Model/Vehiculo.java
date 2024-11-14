@@ -1,8 +1,9 @@
 package proyectofinaljavafx.Model;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
-public abstract class Vehiculo {
+public class Vehiculo {
 
     //----------------------------------------------------------------------------------------------//
     //----------------------------------------------------------------------------------------------//
@@ -10,11 +11,12 @@ public abstract class Vehiculo {
     //Atributos de la clase
     
     private String marca,modelo,placa;
-    private Estado estado;
+    private Disponibilidad disponibilidad;
     private char [] cambios;
     private double velocidadMaxima,cilindraje;
     private Transmision transmision;
     private Combustible combustible;
+    private Estado estado;
     
     //----------------------------------------------------------------------------------------------//
     //----------------------------------------------------------------------------------------------//
@@ -32,37 +34,51 @@ public abstract class Vehiculo {
      * @param transmision
      * @param combustible 
      */
-    public Vehiculo(String placa,String marca,String modelo, Estado estado, double velocidadMaxima , double cilindraje, Transmision transmision, Combustible combustible){
+    public Vehiculo(String placa,String marca,Estado estado,String modelo, double velocidadMaxima , double cilindraje, Transmision transmision, Combustible combustible){
         this.marca=marca;
         this.modelo=modelo;
         this.estado=estado;
+        this.disponibilidad=disponibilidad.VEHICULO_DISPONIBLE;
         this.velocidadMaxima=velocidadMaxima;
         this.cilindraje=cilindraje;
         this.transmision=transmision;
         this.combustible=combustible;
         this.placa=placa;
-        if (transmision.equals( Transmision.MANUAL)) {
-            Scanner s=new Scanner(System.in);
-            System.out.print("Ingrese el número máximo de cambios: ");
-            int MaxCambio=s.nextInt();
+        if (transmision == Transmision.MANUAL){
+            solicitarCambiosManual();
             
-            cambios= new char[MaxCambio+1];
-    
-            cambios[0]= 'R';
-            for (int i = 1; i <= MaxCambio; i++) {
-                cambios[i]= (char) i;
-            }
         }
-        
     }
 
+    /**
+     * Método que crea un array de cambios del vehiculo
+     */
+    private void solicitarCambiosManual() {
+        Scanner s = new Scanner(System.in);
+        try {
+            System.out.print("Ingrese el número máximo de cambios: ");
+            int MaxCambio = s.nextInt();
+            cambios = new char[MaxCambio + 1];
+            
+            // Asignamos 'R' para reversa y números para los cambios
+            cambios[0] = 'R'; // Reversa
+            for (int i = 1; i <= MaxCambio; i++) {
+                cambios[i] = (char) ('0' + i); // Asignamos '1', '2', '3'...
+            }
+        } catch (Exception e) {
+            System.out.println("Error al ingresar los cambios. Por favor, intente de nuevo.");
+        } finally {
+            s.close(); // Cerramos el Scanner
+        }
+    }
+    
     /**
      * Método que muestra el valor de cada dato
      * @return 
      */
     @Override
     public String toString() {
-        return getClass()+ "= Placa ="+placa+", marca = " + marca + ", modelo = " + modelo  + ", estado del vehículo = " + estado + ", velocidad maxima = " + velocidadMaxima +", cilindraje =  "+ cilindraje + ", trasmision = " + transmision +", tipo de combustible = " + combustible;
+        return getClass().getSimpleName()+ "= Placa ="+placa+", estado de uso = "+estado+", marca = " + marca + ", modelo = " + modelo  + ", disponibilidad del vehículo = " + disponibilidad + ", velocidad maxima = " + velocidadMaxima +", cilindraje =  "+ cilindraje + ", trasmision = " + transmision +", tipo de combustible = " + combustible+ ", cambios = " + Arrays.toString(cambios);
     }
     
     //----------------------------------------------------------------------------------------------//
@@ -102,8 +118,8 @@ public abstract class Vehiculo {
         return modelo;
     }
 
-    public Estado getEstado() {
-        return estado;
+    public Disponibilidad getDisponibilidad() {
+        return disponibilidad;
     }
 
     public double getVelocidadMaxima() {
@@ -118,8 +134,8 @@ public abstract class Vehiculo {
         this.modelo = modelo;
     }
 
-    public void setEstado(Estado estado) {
-        this.estado = estado;
+    public void setDisponibilidad(Disponibilidad disponibilidad) {
+        this.disponibilidad = disponibilidad;
     }
 
     public void setVelocidadMaxima(double velocidadMaxima) {
@@ -140,6 +156,14 @@ public abstract class Vehiculo {
 
     public void setCilindraje(double cilindraje) {
         this.cilindraje = cilindraje;
+    }
+
+    public Estado getEstado() {
+        return estado;
+    }
+
+    public void setEstado(Estado estado) {
+        this.estado = estado;
     }
     
     //----------------------------------------------------------------------------------------------//

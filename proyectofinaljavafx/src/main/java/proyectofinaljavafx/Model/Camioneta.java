@@ -36,7 +36,7 @@ public class Camioneta extends VehiculoCargaPasajeros {
      * @param aireAcondicionado
      * @param camaraReversa
      * @param numPasajeros
-     * @param capacidad 
+     * @param capacidad
      */
     public Camioneta(int numPuertas, int numBolsasAire, boolean velocidadCrucero, boolean sensorColision, boolean sensorTraficoCruzado, boolean asistentePermanenciaCarril, boolean es4x4, String placa, String marca, String modelo, Estado estado, double velocidadMaxima, double cilindraje, Transmision transmision, Combustible combustible, boolean abs, boolean aireAcondicionado, boolean camaraReversa, int numPasajeros, double capacidad) {
         super(placa, marca, modelo, estado, velocidadMaxima, cilindraje, transmision, combustible, abs, aireAcondicionado, camaraReversa, numPasajeros, capacidad);

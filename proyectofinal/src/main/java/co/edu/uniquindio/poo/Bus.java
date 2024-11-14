@@ -1,14 +1,13 @@
-package proyectofinaljavafx.Model;
+package co.edu.uniquindio.poo;
 
-public class PickUp extends VehiculoCargaPasajeros{
-    
+public class Bus extends VehiculoCargaPasajeros{
+ 
     //----------------------------------------------------------------------------------------------//
     //----------------------------------------------------------------------------------------------//
     
     //Atributos de la clase
-    
-    private int numPuertas,numBolsasAire;
-    private boolean es4x4;
+
+    private int numPuertas, numBolsasAire,numEjes,numSalidasEmergencia;
 
     //----------------------------------------------------------------------------------------------//
     //----------------------------------------------------------------------------------------------//
@@ -19,7 +18,8 @@ public class PickUp extends VehiculoCargaPasajeros{
      * Método constructor de la clase
      * @param numPuertas
      * @param numBolsasAire
-     * @param es4x4
+     * @param numEjes
+     * @param numSalidasEmergencia
      * @param abs
      * @param aireAcondicionado
      * @param camaraReversa
@@ -35,11 +35,12 @@ public class PickUp extends VehiculoCargaPasajeros{
      * @param transmision
      * @param combustible 
      */
-    public PickUp(int numPuertas, int numBolsasAire, boolean es4x4, boolean abs, boolean aireAcondicionado, boolean camaraReversa, int numPasajeros, double capacidad, String placa, String marca, Estado estado, String modelo, double velocidadMaxima, double cilindraje, Transmision transmision, Combustible combustible) {
+    public Bus(int numPuertas, int numBolsasAire, int numEjes, int numSalidasEmergencia, boolean abs, boolean aireAcondicionado, boolean camaraReversa, int numPasajeros, double capacidad, String placa, String marca, Estado estado, String modelo, double velocidadMaxima, double cilindraje, Transmision transmision, Combustible combustible) {
         super(abs, aireAcondicionado, camaraReversa, numPasajeros, capacidad, placa, marca, estado, modelo, velocidadMaxima, cilindraje, transmision, combustible);
         this.numPuertas = numPuertas;
         this.numBolsasAire = numBolsasAire;
-        this.es4x4 = es4x4;
+        this.numEjes = numEjes;
+        this.numSalidasEmergencia = numSalidasEmergencia;
     }
 
     /**
@@ -48,14 +49,14 @@ public class PickUp extends VehiculoCargaPasajeros{
      */
     @Override
     public String toString() {
-        return super.toString() + ", número de puertas = " + numPuertas + ", número de bolsas de aire = " + numBolsasAire + ", el vehículo es 4x4 = " + es4x4 ;
+        return super.toString()  + ", numero de puertas = " + numPuertas + ", numero de bolsas de aire = " + numBolsasAire + ", numero de ejes = " + numEjes + ", numero de salidas de emergencia = " + numSalidasEmergencia;
     }
     
     //----------------------------------------------------------------------------------------------//
     //----------------------------------------------------------------------------------------------//
     
     //Métodos Getters and Setters
-    
+
     public int getNumPuertas() {
         return numPuertas;
     }
@@ -72,14 +73,22 @@ public class PickUp extends VehiculoCargaPasajeros{
         this.numBolsasAire = numBolsasAire;
     }
 
-    public boolean isEs4x4() {
-        return es4x4;
+    public int getNumEjes() {
+        return numEjes;
     }
 
-    public void setEs4x4(boolean es4x4) {
-        this.es4x4 = es4x4;
+    public void setNumEjes(int numEjes) {
+        this.numEjes = numEjes;
     }
 
+    public int getNumSalidasEmergencia() {
+        return numSalidasEmergencia;
+    }
+
+    public void setNumSalidasEmergencia(int numSalidasEmergencia) {
+        this.numSalidasEmergencia = numSalidasEmergencia;
+    }
+    
     //----------------------------------------------------------------------------------------------//
     //----------------------------------------------------------------------------------------------//
     

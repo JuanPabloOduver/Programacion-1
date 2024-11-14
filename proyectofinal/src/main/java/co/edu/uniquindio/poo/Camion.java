@@ -1,25 +1,24 @@
-package proyectofinaljavafx.Model;
+package co.edu.uniquindio.poo;
 
-public class PickUp extends VehiculoCargaPasajeros{
+public class Camion extends VehiculoCargaPasajeros{
     
     //----------------------------------------------------------------------------------------------//
     //----------------------------------------------------------------------------------------------//
     
     //Atributos de la clase
-    
-    private int numPuertas,numBolsasAire;
-    private boolean es4x4;
+
+    private int numEjes;
+    private TipoCamion tipoCamion;
 
     //----------------------------------------------------------------------------------------------//
     //----------------------------------------------------------------------------------------------//
     
     //Métodos de la clase
-
+    
     /**
      * Método constructor de la clase
-     * @param numPuertas
-     * @param numBolsasAire
-     * @param es4x4
+     * @param numEjes
+     * @param tipoCamion
      * @param abs
      * @param aireAcondicionado
      * @param camaraReversa
@@ -35,11 +34,10 @@ public class PickUp extends VehiculoCargaPasajeros{
      * @param transmision
      * @param combustible 
      */
-    public PickUp(int numPuertas, int numBolsasAire, boolean es4x4, boolean abs, boolean aireAcondicionado, boolean camaraReversa, int numPasajeros, double capacidad, String placa, String marca, Estado estado, String modelo, double velocidadMaxima, double cilindraje, Transmision transmision, Combustible combustible) {
+    public Camion(int numEjes, TipoCamion tipoCamion, boolean abs, boolean aireAcondicionado, boolean camaraReversa, int numPasajeros, double capacidad, String placa, String marca, Estado estado, String modelo, double velocidadMaxima, double cilindraje, Transmision transmision, Combustible combustible) {
         super(abs, aireAcondicionado, camaraReversa, numPasajeros, capacidad, placa, marca, estado, modelo, velocidadMaxima, cilindraje, transmision, combustible);
-        this.numPuertas = numPuertas;
-        this.numBolsasAire = numBolsasAire;
-        this.es4x4 = es4x4;
+        this.numEjes = numEjes;
+        this.tipoCamion = tipoCamion;
     }
 
     /**
@@ -48,36 +46,28 @@ public class PickUp extends VehiculoCargaPasajeros{
      */
     @Override
     public String toString() {
-        return super.toString() + ", número de puertas = " + numPuertas + ", número de bolsas de aire = " + numBolsasAire + ", el vehículo es 4x4 = " + es4x4 ;
+        return super.toString() + ", numero de ejes = " + numEjes + ", tipo de camion = " + tipoCamion;
     }
-    
+
     //----------------------------------------------------------------------------------------------//
     //----------------------------------------------------------------------------------------------//
     
     //Métodos Getters and Setters
     
-    public int getNumPuertas() {
-        return numPuertas;
+    public int getNumEjes() {
+        return numEjes;
     }
 
-    public void setNumPuertas(int numPuertas) {
-        this.numPuertas = numPuertas;
+    public void setNumEjes(int numEjes) {
+        this.numEjes = numEjes;
     }
 
-    public int getNumBolsasAire() {
-        return numBolsasAire;
+    public TipoCamion getTipoCamion() {
+        return tipoCamion;
     }
 
-    public void setNumBolsasAire(int numBolsasAire) {
-        this.numBolsasAire = numBolsasAire;
-    }
-
-    public boolean isEs4x4() {
-        return es4x4;
-    }
-
-    public void setEs4x4(boolean es4x4) {
-        this.es4x4 = es4x4;
+    public void setTipoCamion(TipoCamion tipoCamion) {
+        this.tipoCamion = tipoCamion;
     }
 
     //----------------------------------------------------------------------------------------------//

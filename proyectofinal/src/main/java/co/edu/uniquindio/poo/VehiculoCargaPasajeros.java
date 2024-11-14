@@ -2,22 +2,60 @@ package co.edu.uniquindio.poo;
 
 public class VehiculoCargaPasajeros extends Vehiculo{
     
+    //----------------------------------------------------------------------------------------------//
+    //----------------------------------------------------------------------------------------------//
+
+    //Atributos de la clase
+    
     private boolean abs,aireAcondicionado,camaraReversa;
     private int numPasajeros;
     private double capacidad;
     
+    //----------------------------------------------------------------------------------------------//
+    //----------------------------------------------------------------------------------------------//
     
-    public VehiculoCargaPasajeros(String marca,String modelo, Estado estado, double velocidadMaxima , double cilindraje, Transmision transmision,boolean abs, boolean aireAcondicionado,boolean camaraReversa,int numPasajeros,double capacidad){
-        super(marca, modelo, estado, velocidadMaxima, cilindraje, transmision);
-        
-        this.abs=abs;
-        this.aireAcondicionado=aireAcondicionado;
-        this.camaraReversa=camaraReversa;
-        this.numPasajeros=numPasajeros;
-        this.capacidad=capacidad;
-        
-    }
+    //Métodos de la clase
 
+    /**
+     * Método constructor de la clase
+     * @param abs
+     * @param aireAcondicionado
+     * @param camaraReversa
+     * @param numPasajeros
+     * @param capacidad
+     * @param placa
+     * @param marca
+     * @param estado
+     * @param modelo
+     * @param disponibilidad
+     * @param velocidadMaxima
+     * @param cilindraje
+     * @param transmision
+     * @param combustible 
+     */
+    public VehiculoCargaPasajeros(boolean abs, boolean aireAcondicionado, boolean camaraReversa, int numPasajeros, double capacidad, String placa, String marca, Estado estado, String modelo, double velocidadMaxima, double cilindraje, Transmision transmision, Combustible combustible) {
+        super(placa, marca, estado, modelo, velocidadMaxima, cilindraje, transmision, combustible);
+        this.abs = abs;
+        this.aireAcondicionado = aireAcondicionado;
+        this.camaraReversa = camaraReversa;
+        this.numPasajeros = numPasajeros;
+        this.capacidad = capacidad;
+    }
+    
+    /**
+     * Método que muestra el valor de cada dato
+     * @return 
+     */
+    @Override
+    public String toString() {
+        return super.toString() + ", tiene abs = " + abs + ", tiene aire acondicionado = " + aireAcondicionado + ", tiene camara reversa = " + camaraReversa + ", numero de pasajeros = " + numPasajeros + ", capacidad de carga= " + capacidad;
+    }
+    
+    //----------------------------------------------------------------------------------------------//
+    //----------------------------------------------------------------------------------------------//
+    
+    //Métodos Getters and Setters
+    
     public boolean isAbs() {
         return abs;
     }
@@ -58,11 +96,7 @@ public class VehiculoCargaPasajeros extends Vehiculo{
         this.capacidad = capacidad;
     }
 
-    @Override
-    public String toString() {
-        return super.toString() + ", tiene abs = " + abs + ", tiene aire acondicionado = " + aireAcondicionado + ", tiene camara reversa = " + camaraReversa + ", numero de pasajeros = " + numPasajeros + ", capacidad de carga= " + capacidad;
-    }
-    
-    
+    //----------------------------------------------------------------------------------------------//
+    //----------------------------------------------------------------------------------------------//
     
 }

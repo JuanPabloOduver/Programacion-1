@@ -1,4 +1,4 @@
-package proyectofinaljavafx.Model;
+package co.edu.uniquindio.poo;
 
 import java.util.Scanner;
 
@@ -31,9 +31,6 @@ public class Hibrido extends Vehiculo {
     public Hibrido(String placa,String marca,Estado estado,String modelo, double velocidadMaxima , double cilindraje, Transmision transmision, Combustible combustible, boolean esEnchufable){
         super(placa,marca,estado,modelo,velocidadMaxima,cilindraje,transmision,combustible);
         this.esEnchufable=esEnchufable;
-            
-        combustible=combustible.HIBRIDO;
-
         if(!esEnchufable){
             this.HibridoLigero=determinarEsHibridoLigero();
         }

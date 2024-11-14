@@ -1,14 +1,14 @@
-package proyectofinaljavafx.Model;
+package co.edu.uniquindio.poo;
 
-public class PickUp extends VehiculoCargaPasajeros{
+public class Deportivo extends Vehiculo {
     
     //----------------------------------------------------------------------------------------------//
     //----------------------------------------------------------------------------------------------//
     
     //Atributos de la clase
     
-    private int numPuertas,numBolsasAire;
-    private boolean es4x4;
+    private int numPasajeros,numPuertas,numBolsasAire,numCaballosFuerza;
+    private double tiempoAlcanza100Km;
 
     //----------------------------------------------------------------------------------------------//
     //----------------------------------------------------------------------------------------------//
@@ -17,14 +17,11 @@ public class PickUp extends VehiculoCargaPasajeros{
 
     /**
      * Método constructor de la clase
+     * @param numPasajeros
      * @param numPuertas
      * @param numBolsasAire
-     * @param es4x4
-     * @param abs
-     * @param aireAcondicionado
-     * @param camaraReversa
-     * @param numPasajeros
-     * @param capacidad
+     * @param numCaballosFuerza
+     * @param tiempoAlcanza100Km
      * @param placa
      * @param marca
      * @param estado
@@ -35,11 +32,13 @@ public class PickUp extends VehiculoCargaPasajeros{
      * @param transmision
      * @param combustible 
      */
-    public PickUp(int numPuertas, int numBolsasAire, boolean es4x4, boolean abs, boolean aireAcondicionado, boolean camaraReversa, int numPasajeros, double capacidad, String placa, String marca, Estado estado, String modelo, double velocidadMaxima, double cilindraje, Transmision transmision, Combustible combustible) {
-        super(abs, aireAcondicionado, camaraReversa, numPasajeros, capacidad, placa, marca, estado, modelo, velocidadMaxima, cilindraje, transmision, combustible);
+    public Deportivo(int numPasajeros, int numPuertas, int numBolsasAire, int numCaballosFuerza, double tiempoAlcanza100Km, String placa, String marca, Estado estado, String modelo, double velocidadMaxima, double cilindraje, Transmision transmision, Combustible combustible) {
+        super(placa, marca, estado, modelo, velocidadMaxima, cilindraje, transmision, combustible);
+        this.numPasajeros = numPasajeros;
         this.numPuertas = numPuertas;
         this.numBolsasAire = numBolsasAire;
-        this.es4x4 = es4x4;
+        this.numCaballosFuerza = numCaballosFuerza;
+        this.tiempoAlcanza100Km = tiempoAlcanza100Km;
     }
 
     /**
@@ -48,7 +47,7 @@ public class PickUp extends VehiculoCargaPasajeros{
      */
     @Override
     public String toString() {
-        return super.toString() + ", número de puertas = " + numPuertas + ", número de bolsas de aire = " + numBolsasAire + ", el vehículo es 4x4 = " + es4x4 ;
+        return super.toString() + ", capacidad de pasajeros = " + numPasajeros + ", cantidad de puertas = " + numPuertas + ", número de bolsas de aire = " + numBolsasAire + ", numero de caballos de fuerza = " + numCaballosFuerza + ", tiempo en el que alcanza los 100Km = " + tiempoAlcanza100Km + 's';
     }
     
     //----------------------------------------------------------------------------------------------//
@@ -56,6 +55,14 @@ public class PickUp extends VehiculoCargaPasajeros{
     
     //Métodos Getters and Setters
     
+    public int getNumPasajeros() {
+        return numPasajeros;
+    }
+
+    public void setNumPasajeros(int numPasajeros) {
+        this.numPasajeros = numPasajeros;
+    }
+
     public int getNumPuertas() {
         return numPuertas;
     }
@@ -72,12 +79,20 @@ public class PickUp extends VehiculoCargaPasajeros{
         this.numBolsasAire = numBolsasAire;
     }
 
-    public boolean isEs4x4() {
-        return es4x4;
+    public int getNumCaballosFuerza() {
+        return numCaballosFuerza;
     }
 
-    public void setEs4x4(boolean es4x4) {
-        this.es4x4 = es4x4;
+    public void setNumCaballosFuerza(int numCaballosFuerza) {
+        this.numCaballosFuerza = numCaballosFuerza;
+    }
+
+    public double getTiempoAlcanza100Km() {
+        return tiempoAlcanza100Km;
+    }
+
+    public void setTiempoAlcanza100Km(double tiempoAlcanza100Km) {
+        this.tiempoAlcanza100Km = tiempoAlcanza100Km;
     }
 
     //----------------------------------------------------------------------------------------------//

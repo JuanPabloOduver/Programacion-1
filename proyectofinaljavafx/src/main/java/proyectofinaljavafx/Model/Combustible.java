@@ -4,5 +4,5 @@ public enum Combustible {
 
     //Valores de la ennumeración
     
-    GASOLINA, DIESEL
+    GASOLINA, DIESEL, ELECTRICO, HIBRIDO
 }

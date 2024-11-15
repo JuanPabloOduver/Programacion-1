@@ -15,78 +15,30 @@
             <Font name="System Bold Italic" size="30.0" />
          </font>
       </Label>
-      <ComboBox layoutX="339.0" layoutY="345.0" prefHeight="31.0" prefWidth="279.0" promptText="Seleccione el tipo de transmisión" />
-      <TableView layoutX="27.0" layoutY="498.0" prefHeight="323.0" prefWidth="1281.0" style="-fx-background-color: #e0e4ce;">
+      <TableView fx:id="tbcDeportivo" layoutX="27.0" layoutY="498.0" prefHeight="323.0" prefWidth="1281.0" style="-fx-background-color: #e0e4ce;">
          <columns>
-            <TableColumn prefWidth="75.0" text="Placa" />
-            <TableColumn prefWidth="75.0" text="Marca" />
-            <TableColumn prefWidth="75.0" text="Modelo" />
-            <TableColumn prefWidth="75.0" text="Estado" />
-            <TableColumn prefWidth="75.0" text="Velocidad Maxima" />
-            <TableColumn prefWidth="75.0" text="Cilindraje" />
-            <TableColumn prefWidth="75.0" text="Transmision" />
-            <TableColumn prefWidth="75.0" text="Combustible" />
-            <TableColumn prefWidth="75.0" text="Número Pasajeros" />
-            <TableColumn prefWidth="75.0" text="Número de Puertas" />
-            <TableColumn prefWidth="75.0" text="Número de Bolsas de Aire" />
-            <TableColumn prefWidth="75.0" text="Número de caballos de fuerza" />
-            <TableColumn prefWidth="75.0" text="En cuanto tiempo alcanza los 100 km" />
+            <TableColumn fx:id="tbcPlaca" prefWidth="75.0" text="Placa" />
+            <TableColumn fx:id="tbcMarca" prefWidth="75.0" text="Marca" />
+            <TableColumn fx:id="tbcModelo" prefWidth="75.0" text="Modelo" />
+            <TableColumn fx:id="tbcEstado" prefWidth="75.0" text="Estado" />
+            <TableColumn fx:id="tbcVelocidadMax" prefWidth="75.0" text="Velocidad Maxima" />
+            <TableColumn fx:id="tbcCilindraje" prefWidth="75.0" text="Cilindraje" />
+            <TableColumn fx:id="tbcTransmision" prefWidth="75.0" text="Transmision" />
+            <TableColumn fx:id="tbcCombustible" prefWidth="75.0" text="Combustible" />
+            <TableColumn fx:id="tbcNumPasajeros" prefWidth="123.0" text="Número Pasajeros" />
+            <TableColumn fx:id="tbcNumPuertas" prefWidth="138.0" text="Número de Puertas" />
+            <TableColumn fx:id="tbcNumBolsasAire" prefWidth="129.0" text="Número de Bolsas de Aire" />
+            <TableColumn prefWidth="153.0" text="Número de caballos de fuerza" />
+            <TableColumn prefWidth="137.0" text="En cuanto tiempo alcanza los 100 km" />
          </columns>
       </TableView>
-      <Label layoutX="264.0" layoutY="93.0" text="Placa:">
-         <font>
-            <Font name="System Bold Italic" size="22.0" />
-         </font>
-      </Label>
-      <TextField fx:id="btnText" layoutX="339.0" layoutY="93.0" opacity="0.5" />
-      <TextField fx:id="btnText1" layoutX="339.0" layoutY="135.0" opacity="0.5" />
-      <Label layoutX="256.0" layoutY="135.0" text="Marca:">
-         <font>
-            <Font name="System Bold Italic" size="22.0" />
-         </font>
-      </Label>
-      <TextField fx:id="btnText2" layoutX="339.0" layoutY="177.0" opacity="0.5" />
-      <Label layoutX="250.0" layoutY="177.0" text="Modelo:">
-         <font>
-            <Font name="System Bold Italic" size="22.0" />
-         </font>
-      </Label>
-      <Label layoutX="229.0" layoutY="300.0" text="Cilindraje:">
-         <font>
-            <Font name="System Bold Italic" size="22.0" />
-         </font>
-      </Label>
-      <TextField fx:id="btnText21" layoutX="339.0" layoutY="301.0" opacity="0.5" />
-      <Label layoutX="129.0" layoutY="260.0" text="Velocidad Máxima:">
-         <font>
-            <Font name="System Bold Italic" size="22.0" />
-         </font>
-      </Label>
-      <TextField fx:id="btnText11" layoutX="339.0" layoutY="261.0" opacity="0.5" />
-      <TextField fx:id="btnText3" layoutX="339.0" layoutY="221.0" opacity="0.5" />
-      <Label layoutX="257.0" layoutY="220.0" text="Estado:">
-         <font>
-            <Font name="System Bold Italic" size="22.0" />
-         </font>
-      </Label>
-      <Label layoutX="199.0" layoutY="344.0" text="Transmisión:">
-         <font>
-            <Font name="System Bold Italic" size="22.0" />
-         </font>
-      </Label>
-      <Label layoutX="199.0" layoutY="386.0" text="Combustible:">
-         <font>
-            <Font name="System Bold Italic" size="22.0" />
-         </font>
-      </Label>
-      <ComboBox layoutX="339.0" layoutY="387.0" prefHeight="31.0" prefWidth="279.0" promptText="Seleccione el tipo de combustible" />
       <Label layoutX="705.0" layoutY="95.0" text="Número Pasajeros: ">
          <font>
             <Font name="System Bold Italic" size="22.0" />
          </font>
       </Label>
-      <TextField fx:id="btnText2111" layoutX="913.0" layoutY="96.0" opacity="0.5" />
-      <TextField fx:id="btnText2112" layoutX="913.0" layoutY="136.0" opacity="0.5" />
+      <TextField fx:id="txtNumPasajeros" layoutX="913.0" layoutY="96.0" opacity="0.5" />
+      <TextField fx:id="txt" layoutX="913.0" layoutY="136.0" opacity="0.5" />
       <Label layoutX="705.0" layoutY="136.0" text="Número de Puertas:">
          <font>
             <Font name="System Bold Italic" size="22.0" />
@@ -135,5 +87,59 @@
          </font>
       </Label>
       <TextField fx:id="btnText21122" layoutX="913.0" layoutY="217.0" opacity="0.5" />
+      <TextField fx:id="txtCapacidad" layoutX="349.0" layoutY="437.0" opacity="0.5" />
+      <Label layoutX="220.0" layoutY="436.0" text="Capacidad:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cbbCombustible" layoutX="349.0" layoutY="397.0" prefHeight="31.0" prefWidth="279.0" promptText="Seleccione el tipo de combustible" />
+      <Label layoutX="209.0" layoutY="396.0" text="Combustible:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="209.0" layoutY="354.0" text="Transimisión:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="267.0" layoutY="230.0" text="Estado:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtEstado" layoutX="349.0" layoutY="231.0" opacity="0.5" />
+      <TextField fx:id="txtVelocidadMax" layoutX="349.0" layoutY="271.0" opacity="0.5" />
+      <Label layoutX="139.0" layoutY="270.0" text="Velocidad Máxima:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCilindraje" layoutX="349.0" layoutY="311.0" opacity="0.5" />
+      <Label layoutX="239.0" layoutY="310.0" text="Cilindraje:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="260.0" layoutY="187.0" text="Modelo:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtModelo" layoutX="349.0" layoutY="187.0" opacity="0.5" />
+      <Label layoutX="266.0" layoutY="145.0" text="Marca:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtMarca" layoutX="349.0" layoutY="145.0" opacity="0.5" />
+      <TextField fx:id="txtPlaca" layoutX="349.0" layoutY="103.0" opacity="0.5" />
+      <Label layoutX="274.0" layoutY="103.0" text="Placa:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cbbTransmision" layoutX="349.0" layoutY="355.0" prefHeight="31.0" prefWidth="279.0" promptText="Seleccione el tipo de transmisión" />
    </children>
 </AnchorPane>

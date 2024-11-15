@@ -90,12 +90,6 @@
          </font>
       </Label>
       <TextField fx:id="txtVelocidadMax" layoutX="339.0" layoutY="256.0" opacity="0.5" />
-      <TextField fx:id="txtEstado" layoutX="339.0" layoutY="216.0" opacity="0.5" />
-      <Label layoutX="257.0" layoutY="215.0" text="Estado:">
-         <font>
-            <Font name="System Bold Italic" size="22.0" />
-         </font>
-      </Label>
       <Label layoutX="199.0" layoutY="339.0" text="Transimisión:">
          <font>
             <Font name="System Bold Italic" size="22.0" />
@@ -113,5 +107,11 @@
          </font>
       </Label>
       <TextField fx:id="txtCapacidad" layoutX="339.0" layoutY="422.0" opacity="0.5" />
+      <Label layoutX="252.0" layoutY="213.0" text="Estado:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cbbEstado" layoutX="334.0" layoutY="214.0" prefHeight="31.0" prefWidth="279.0" promptText="Seleccione el tipo de estado" />
    </children>
 </AnchorPane>

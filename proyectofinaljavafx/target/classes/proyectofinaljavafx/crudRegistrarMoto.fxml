@@ -90,7 +90,6 @@
          </font>
       </Label>
       <TextField fx:id="txtVelocidadMax" layoutX="341.0" layoutY="254.0" opacity="0.5" />
-      <TextField fx:id="txtEstado" layoutX="341.0" layoutY="214.0" opacity="0.5" />
       <Label layoutX="259.0" layoutY="213.0" text="Estado:">
          <font>
             <Font name="System Bold Italic" size="22.0" />
@@ -107,5 +106,6 @@
          </font>
       </Label>
       <ComboBox fx:id="cbbCombustible" layoutX="341.0" layoutY="380.0" prefHeight="31.0" prefWidth="279.0" promptText="Seleccione el tipo de combustible" />
+      <ComboBox fx:id="cbbEstado" layoutX="341.0" layoutY="214.0" prefHeight="31.0" prefWidth="279.0" promptText="Seleccione el tipo de estado" />
    </children>
 </AnchorPane>

@@ -7,33 +7,25 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="382.0" prefWidth="502.0" style="-fx-background-color: #e0e4ce;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="767.0" prefWidth="1296.0" style="-fx-background-color: #e0e4ce;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="HARD_LIGHT" fill="#6e9987" height="263.0" layoutX="52.0" layoutY="73.0" opacity="0.75" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="399.0" />
-      <ImageView fx:id="txtUsuario" fitHeight="135.0" fitWidth="134.0" layoutX="317.0" layoutY="-27.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../imagenes/Logo%20Tu%20Carro%20UQ%20sin%20fondo.png" />
-         </image>
-      </ImageView>
-      <Label layoutX="52.0" layoutY="21.0" text="Bienvenido Cliente">
+      <TableView layoutX="15.0" layoutY="76.0" prefHeight="468.0" prefWidth="1267.0" style="-fx-background-color: #6e9987;">
+         <columns>
+            <TableColumn prefWidth="128.0" text="Placa" />
+            <TableColumn prefWidth="190.0" text="Marca" />
+            <TableColumn prefWidth="149.0" text="Modelo" />
+            <TableColumn prefWidth="106.0" text="Estado" />
+            <TableColumn prefWidth="170.0" text="Velocidad Maxima" />
+            <TableColumn prefWidth="121.0" text="Cilindraje" />
+            <TableColumn prefWidth="167.0" text="Transmision" />
+            <TableColumn prefWidth="126.0" text="Combustible" />
+            <TableColumn prefWidth="107.0" text="Disponibilidad" />
+         </columns>
+      </TableView>
+      <Label layoutX="516.0" layoutY="21.0" prefHeight="45.0" prefWidth="265.0" text="Bienvenido cliente">
          <font>
-            <Font name="System Bold Italic" size="26.0" />
+            <Font name="System Bold Italic" size="30.0" />
          </font>
       </Label>
-      <Label layoutX="139.0" layoutY="91.0" text="¿Que quieres hacer hoy?">
-         <font>
-            <Font name="System Bold Italic" size="20.0" />
-         </font>
-      </Label>
-      <Text fontSmoothingType="LCD" layoutX="14.0" layoutY="358.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;" wrappingWidth="28.26123046875">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Text>
-      <Button fx:id="btnVolver" layoutX="25.0" layoutY="336.0" mnemonicParsing="false" onAction="#onOpenIngresarComoCliente" style="-fx-background-color: #e0e4ce;" text="Volver">
-         <font>
-            <Font name="System Bold Italic" size="15.0" />
-         </font>
-      </Button>
    </children>
-</Pane>
+</AnchorPane>

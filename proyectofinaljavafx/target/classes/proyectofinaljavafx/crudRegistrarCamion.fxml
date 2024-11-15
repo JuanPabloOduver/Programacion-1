@@ -112,17 +112,17 @@
             <Font name="System Bold Italic" size="22.0" />
          </font>
       </Label>
-      <Button fx:id="btnRegistrarVehiculo" layoutX="679.0" layoutY="425.0" mnemonicParsing="false" style="-fx-background-color: #114d4d;" text="Registrar Vehículo" textFill="WHITE">
+      <Button fx:id="btnRegistrarVehiculo" layoutX="679.0" layoutY="425.0" mnemonicParsing="false" onAction="#onRegistrarVehiculo" style="-fx-background-color: #114d4d;" text="Registrar Vehículo" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="17.0" />
          </font>
       </Button>
-      <Button fx:id="btnEliminarVehiculo" layoutX="868.0" layoutY="425.0" mnemonicParsing="false" style="-fx-background-color: #114d4d;" text="Eliminar Vehículo" textFill="WHITE">
+      <Button fx:id="btnEliminarVehiculo" layoutX="868.0" layoutY="425.0" mnemonicParsing="false" onAction="#onEliminarVehiculo" style="-fx-background-color: #114d4d;" text="Eliminar Vehículo" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="17.0" />
          </font>
       </Button>
-      <Button fx:id="btnLimpiar" layoutX="1048.0" layoutY="425.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="154.0" style="-fx-background-color: #114d4d;" text="Limpiar" textFill="WHITE">
+      <Button fx:id="btnLimpiar" layoutX="1048.0" layoutY="425.0" mnemonicParsing="false" onAction="#onLimpiar" prefHeight="38.0" prefWidth="154.0" style="-fx-background-color: #114d4d;" text="Limpiar" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="17.0" />
          </font>

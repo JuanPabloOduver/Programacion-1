@@ -69,7 +69,7 @@
             <Font name="System Bold Italic" size="17.0" />
          </font>
       </Button>
-      <Button fx:id="btnVolver" layoutX="56.0" layoutY="48.0" mnemonicParsing="false" onAction="#onOpenRegistrarVehiculo" style="-fx-background-color: #6e9987;" text="Volver">
+      <Button fx:id="btnVolver" layoutX="56.0" layoutY="48.0" mnemonicParsing="false" onAction="#onOpenMenuEmpleado" style="-fx-background-color: #6e9987;" text="Volver">
          <font>
             <Font name="System Bold Italic" size="15.0" />
          </font>

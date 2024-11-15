@@ -29,10 +29,10 @@
             <TableColumn fx:id="tbcAbs" prefWidth="75.0" text="ABS" />
             <TableColumn fx:id="tbcAireAcondicionado" prefWidth="75.0" text="Aire Acondicionado" />
             <TableColumn fx:id="tbcCamaraReversa" prefWidth="75.0" text="Camara Reversa" />
-            <TableColumn fx:id="tbcNumPasajeros" prefWidth="75.0" text="Número Pasajeros" />
-            <TableColumn fx:id="tbcCapacidad" prefWidth="75.0" text="Capacidad" />
-            <TableColumn fx:id="tbcNumEjes" prefWidth="75.0" text="Número de ejes" />
-            <TableColumn fx:id="tbcTipoCamion" prefWidth="75.0" text="Tipo de Camión" />
+            <TableColumn fx:id="tbcNumPasajeros" prefWidth="89.0" text="Número Pasajeros" />
+            <TableColumn fx:id="tbcCapacidad" prefWidth="84.0" text="Capacidad" />
+            <TableColumn fx:id="tbcNumEjes" prefWidth="131.0" text="Número de ejes" />
+            <TableColumn fx:id="tbcTipoCamion" prefWidth="151.0" text="Tipo de Camión" />
          </columns>
       </TableView>
       <Label layoutX="264.0" layoutY="93.0" text="Placa:">

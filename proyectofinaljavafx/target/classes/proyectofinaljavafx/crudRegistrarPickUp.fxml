@@ -28,11 +28,11 @@
             <TableColumn fx:id="tbcAbs" prefWidth="75.0" text="ABS" />
             <TableColumn fx:id="tbcAireAcondicionado" prefWidth="75.0" text="Aire Acondicionado" />
             <TableColumn fx:id="tbcCamaraReversa" prefWidth="75.0" text="Camara Reversa" />
-            <TableColumn fx:id="tbcNumPasajeros" prefWidth="75.0" text="Número Pasajeros" />
-            <TableColumn fx:id="tbcCapacidad" prefWidth="75.0" text="Capacidad" />
-            <TableColumn fx:id="tbcNumPuertas" prefWidth="75.0" text="Número de Puertas" />
-            <TableColumn fx:id="tbcNumBolsasAire" prefWidth="75.0" text="Número de Bolsas de Aire" />
-            <TableColumn fx:id="tbcEs4x4" prefWidth="75.0" text="¿Es 4x4?" />
+            <TableColumn fx:id="tbcNumPasajeros" prefWidth="84.0" text="Número Pasajeros" />
+            <TableColumn fx:id="tbcCapacidad" prefWidth="74.0" text="Capacidad" />
+            <TableColumn fx:id="tbcNumPuertas" prefWidth="94.0" text="Número de Puertas" />
+            <TableColumn fx:id="tbcNumBolsasAire" prefWidth="92.0" text="Número de Bolsas de Aire" />
+            <TableColumn fx:id="tbcEs4x4" prefWidth="111.0" text="¿Es 4x4?" />
          </columns>
       </TableView>
       <Label layoutX="845.0" layoutY="93.0" text="ABS:">

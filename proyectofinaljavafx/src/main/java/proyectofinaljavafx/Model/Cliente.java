@@ -1,4 +1,4 @@
-package proyectofinaljavafx.Model;
+package co.edu.uniquindio.poo.model;
 
 public class Cliente extends Persona{
 
@@ -7,7 +7,7 @@ public class Cliente extends Persona{
     
     //Atributos de la clase
     
-    private int telefono;
+    private String telefono;
 
     //----------------------------------------------------------------------------------------------//
     //----------------------------------------------------------------------------------------------//
@@ -24,7 +24,7 @@ public class Cliente extends Persona{
      * @param contraseña
      * @param edad 
      */
-    public Cliente(int telefono, String nombre, String apellidos, String email, String cedula, String contraseña, int edad) {
+    public Cliente(String telefono, String nombre, String apellidos, String email, String cedula, String contraseña, int edad) {
         super(nombre, apellidos, email, cedula, contraseña, edad);
         this.telefono = telefono;
     }
@@ -43,11 +43,11 @@ public class Cliente extends Persona{
     
     //Métodos Getters and Setters
     
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
     

@@ -1,4 +1,4 @@
-package proyectofinaljavafx.Model;
+package co.edu.uniquindio.poo.model;
 
 public class Motocicleta extends Vehiculo{
     

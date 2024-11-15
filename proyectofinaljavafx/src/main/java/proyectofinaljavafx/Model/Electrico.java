@@ -1,4 +1,4 @@
-package proyectofinaljavafx.Model;
+package co.edu.uniquindio.poo.model;
 
 public class Electrico extends Vehiculo {
 
@@ -29,9 +29,6 @@ public class Electrico extends Vehiculo {
      */
     public Electrico(String placa,String marca,Estado estado,String modelo, double velocidadMaxima , double cilindraje, Transmision transmision, Combustible combustible, double duracionBateria, double TiempoEnCargar){
         super(placa,marca,estado,modelo,velocidadMaxima,cilindraje,transmision,combustible);
-        
-        combustible=combustible.ELECTRICO;
-        
         this.TiempoEnCargar=TiempoEnCargar;
         this.duracionBateria=duracionBateria;
     }

@@ -1,6 +1,7 @@
-package proyectofinaljavafx.Model;
+package co.edu.uniquindio.poo.model;
 
 import java.util.LinkedList;
+import java.util.Scanner;
 
 public class Concesionario {
 
@@ -10,6 +11,7 @@ public class Concesionario {
     //Atributos de la clase
     
     private String nombre, direccion;
+    private LinkedList<String> codigosActivos;
     private LinkedList<Empleado> empleadosContratados;
     private LinkedList<Cliente> clientes;
     private LinkedList<Vehiculo> vehiculos;
@@ -18,9 +20,9 @@ public class Concesionario {
     
     //----------------------------------------------------------------------------------------------//
     //----------------------------------------------------------------------------------------------//
-    
+
     //Métodos de la clase
-    
+
     /**
      * Método constructor de la clase
      *
@@ -40,23 +42,8 @@ public class Concesionario {
     }
 
     //----------------------------------------------------------------------------------------------//
+        
     
-    //Métodos de verificación/Busqueda
-    
-//     public static List<Vehiculo> filtrarVehiculos(List<Vehiculo> vehiculos, String modeloBuscado, Boolean tieneAireAcondicionado) {
-//        List<Vehiculo> vehiculosFiltrados = new ArrayList<>();
-//        for (Vehiculo v : vehiculos) {
-//            // Filtra por el modelo, si se proporciona
-//            boolean coincideModelo = modeloBuscado == null || v.getModelo().equalsIgnoreCase(modeloBuscado);
-//            // Si tieneAireAcondicionado es null, no filtra por aire acondicionado
-//            boolean coincideAireAcondicionado = (tieneAireAcondicionado == null) || (v.getA() == tieneAireAcondicionado);
-//            // Solo agregar el vehículo si cumple con ambos filtros
-//            if (coincideModelo && coincideAireAcondicionado) {
-//                vehiculosFiltrados.add(v);
-//            }
-//        }
-//        return vehiculosFiltrados;
-//    }
     
     /**
      * Método que busca un vehiculo en el listado de la empresa con una placa
@@ -173,6 +160,17 @@ public class Concesionario {
     }
 
     /**
+     * Método que registra un vehiculo en los datos de la empresa
+     *
+     * @param vehiculo
+     */
+    public void registrarVehiculo(Vehiculo vehiculo) {
+        if (!verificarVehiculo(vehiculo.getPlaca())) {
+            vehiculos.add(vehiculo);
+        }
+    }
+    
+    /**
      * Método que registra un empleado en la lista de bloqueos de la empresa
      *
      * @param cedula
@@ -215,7 +213,7 @@ public class Concesionario {
         Empleado empleado= vehiculoComprado.getEmpleado();
 
         if (!verificarVehiculo(placavehiculo) &&  !verificarTramite(vehiculoComprado.getCodigoTramite())) {
-            vehiculos.add(vehiculo);
+            registrarVehiculo(vehiculo);
             
             vehiculoComprado.setEstadoTramite(EstadoTramite.VEHICULO_COMPRADO);
             
@@ -262,13 +260,13 @@ public class Concesionario {
         Empleado empleado= vehiculoVendido.getEmpleado();
 
         if (verificarVehiculo(placavehiculo) &&  !verificarTramite(vehiculoVendido.getCodigoTramite())) {
-            vehiculos.remove(vehiculo);
+            eliminarVehiculo(vehiculoVendido.getVehiculo().getPlaca());
             
             vehiculoVendido.setEstadoTramite(EstadoTramite.VEHICULO_VENDIDO);
             
             empleado.VehiculoVendido(vehiculoVendido);
             tramites.add(vehiculoVendido);
-            administrador.añadirTramites(vehiculoVendido);           
+            administrador.añadirTramites(vehiculoVendido);
         }else{
             System.out.println("No se puede crear el tramite por que ya hay uno con el mismo còdigo o no hay un coche con la placa ingresada.");
         }
@@ -310,10 +308,18 @@ public class Concesionario {
      * @param placa
      */
     public void eliminarVehiculo(String placa) {
+        Scanner d= new Scanner(System.in);
+        
         if (verificarVehiculo(placa)) {
             for (Vehiculo vehiculo : vehiculos) {
                 if (vehiculo.getPlaca().equals(placa)) {
-                    vehiculos.remove(vehiculo);
+                    System.out.print("¿Quieres eliminar el vehiculo " + vehiculo.toString()+ "? Y/N :");
+                    char respuesta= d.nextLine().charAt(0);
+                    if(Character.toUpperCase(respuesta) =='Y'){
+                            vehiculos.remove(vehiculo);   
+                    }else{
+                        System.out.println("El vehiculo");
+                    }
                 }
             }
         }
@@ -389,6 +395,22 @@ public class Concesionario {
 
     public void setVehiculos(LinkedList<Vehiculo> vehiculos) {
         this.vehiculos = vehiculos;
+    }
+
+    public LinkedList<Cliente> getClientes() {
+        return clientes;
+    }
+
+    public void setClientes(LinkedList<Cliente> clientes) {
+        this.clientes = clientes;
+    }
+
+    public Administrador getAdministrador() {
+        return administrador;
+    }
+
+    public void setAdministrador(Administrador administrador) {
+        this.administrador = administrador;
     }
 
     //----------------------------------------------------------------------------------------------//

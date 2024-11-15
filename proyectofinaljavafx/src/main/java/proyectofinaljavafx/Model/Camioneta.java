@@ -1,4 +1,4 @@
-package proyectofinaljavafx.Model;
+package co.edu.uniquindio.poo.model;
 
 public class Camioneta extends VehiculoCargaPasajeros {
 
@@ -124,5 +124,3 @@ public class Camioneta extends VehiculoCargaPasajeros {
     //----------------------------------------------------------------------------------------------//
     
 }
-
-

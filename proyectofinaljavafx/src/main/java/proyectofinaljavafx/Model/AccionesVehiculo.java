@@ -1,4 +1,4 @@
-package proyectofinaljavafx.Model;
+package co.edu.uniquindio.poo.model;
 
 public class AccionesVehiculo {
 
@@ -23,7 +23,7 @@ public class AccionesVehiculo {
      * @param vehiculo
      * @param empleado
      * @param cliente
-     * @param CostoAccion 
+     * @param CostoAccion
      */
     public AccionesVehiculo(Vehiculo vehiculo, Empleado empleado, Cliente cliente, String codigoTramite) {
         this.vehiculo = vehiculo;

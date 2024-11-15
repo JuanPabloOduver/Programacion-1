@@ -18,14 +18,14 @@
       <TableView fx:id="tbMoto" layoutX="27.0" layoutY="498.0" prefHeight="323.0" prefWidth="1281.0" style="-fx-background-color: #e0e4ce;">
          <columns>
             <TableColumn fx:id="tbcPlaca" prefWidth="75.0" text="Placa" />
-            <TableColumn fx:id="tbcMarca" prefWidth="75.0" text="Marca" />
-            <TableColumn fx:id="tbcModelo" prefWidth="75.0" text="Modelo" />
-            <TableColumn fx:id="tbcEstado" prefWidth="75.0" text="Estado" />
-            <TableColumn fx:id="tbcVelocidad" prefWidth="75.0" text="Velocidad Maxima" />
-            <TableColumn fx:id="tbcCilindraje" prefWidth="75.0" text="Cilindraje" />
-            <TableColumn fx:id="tbcTransmision" prefWidth="102.0" text="Transmision" />
-            <TableColumn fx:id="tbcCombustible" prefWidth="100.0" text="Combustible" />
-            <TableColumn fx:id="tbcColor" prefWidth="113.0" text="Color" />
+            <TableColumn fx:id="tbcMarca" prefWidth="90.0" text="Marca" />
+            <TableColumn fx:id="tbcModelo" prefWidth="89.0" text="Modelo" />
+            <TableColumn fx:id="tbcEstado" prefWidth="168.0" text="Estado" />
+            <TableColumn fx:id="tbcVelocidad" prefWidth="168.0" text="Velocidad Maxima" />
+            <TableColumn fx:id="tbcCilindraje" prefWidth="145.0" text="Cilindraje" />
+            <TableColumn fx:id="tbcTransmision" prefWidth="201.0" text="Transmision" />
+            <TableColumn fx:id="tbcCombustible" prefWidth="183.0" text="Combustible" />
+            <TableColumn fx:id="tbcColor" prefWidth="161.0" text="Color" />
          </columns>
       </TableView>
       <Label layoutX="271.0" layoutY="420.0" text="Color:">

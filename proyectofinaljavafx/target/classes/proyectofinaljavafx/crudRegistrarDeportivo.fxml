@@ -15,7 +15,7 @@
             <Font name="System Bold Italic" size="30.0" />
          </font>
       </Label>
-      <TableView layoutX="27.0" layoutY="498.0" prefHeight="323.0" prefWidth="1281.0" style="-fx-background-color: #e0e4ce;">
+      <TableView fx:id="tbcDeportivo" layoutX="27.0" layoutY="498.0" prefHeight="323.0" prefWidth="1281.0" style="-fx-background-color: #e0e4ce;">
          <columns>
             <TableColumn fx:id="tbcPlaca" prefWidth="75.0" text="Placa" />
             <TableColumn fx:id="tbcMarca" prefWidth="75.0" text="Marca" />

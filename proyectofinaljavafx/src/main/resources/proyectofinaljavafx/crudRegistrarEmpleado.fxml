@@ -9,8 +9,8 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="835.0" prefWidth="1139.0" style="-fx-background-color: #e0e4ce;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6e9987" height="460.0" layoutX="27.0" layoutY="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1075.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6e9987" height="45.0" layoutX="398.0" layoutY="25.0" stroke="#114d4d" strokeType="INSIDE" width="305.0" />
-      <Label layoutX="407.0" layoutY="25.0" prefHeight="45.0" prefWidth="305.0" text="Registo de Empleado">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6e9987" height="45.0" layoutX="390.0" layoutY="25.0" stroke="#114d4d" strokeType="INSIDE" width="322.0" />
+      <Label layoutX="399.0" layoutY="25.0" prefHeight="45.0" prefWidth="305.0" text="Registro de Empleado">
          <font>
             <Font name="System Bold Italic" size="30.0" />
          </font>

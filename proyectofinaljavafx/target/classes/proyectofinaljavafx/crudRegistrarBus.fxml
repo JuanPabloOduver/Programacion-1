@@ -14,26 +14,26 @@
          <font>
             <Font name="System Bold Italic" size="30.0" />
          </font></Label>
-      <ComboBox layoutX="339.0" layoutY="345.0" prefHeight="31.0" prefWidth="279.0" promptText="Seleccione el tipo de transmisión" />
-      <TableView layoutX="27.0" layoutY="498.0" prefHeight="323.0" prefWidth="1281.0" style="-fx-background-color: #e0e4ce;">
+      <ComboBox fx:id="cbbTransmision" layoutX="339.0" layoutY="345.0" prefHeight="31.0" prefWidth="279.0" promptText="Seleccione el tipo de transmisión" />
+      <TableView fx:id="tbBus" layoutX="27.0" layoutY="498.0" prefHeight="323.0" prefWidth="1281.0" style="-fx-background-color: #e0e4ce;">
         <columns>
-          <TableColumn prefWidth="75.0" text="Placa" />
-          <TableColumn prefWidth="75.0" text="Marca" />
-            <TableColumn prefWidth="75.0" text="Modelo" />
-            <TableColumn prefWidth="75.0" text="Estado" />
-            <TableColumn prefWidth="75.0" text="Velocidad Maxima" />
-            <TableColumn prefWidth="75.0" text="Cilindraje" />
-            <TableColumn prefWidth="75.0" text="Transmision" />
-            <TableColumn prefWidth="75.0" text="Combustible" />
-            <TableColumn prefWidth="75.0" text="ABS" />
-            <TableColumn prefWidth="75.0" text="Aire Acondicionado" />
-            <TableColumn prefWidth="75.0" text="Camara Reversa" />
-            <TableColumn prefWidth="75.0" text="Número Pasajeros" />
-            <TableColumn prefWidth="75.0" text="Capacidad" />
-            <TableColumn prefWidth="75.0" text="Número de Puertas" />
-            <TableColumn prefWidth="75.0" text="Número de Bolsas de Aire" />
-            <TableColumn prefWidth="75.0" text="Número de ejes" />
-            <TableColumn prefWidth="75.0" text="Número de salidas de emergencia" />
+          <TableColumn fx:id="tbcPlaca" prefWidth="75.0" text="Placa" />
+          <TableColumn fx:id="tbcMarca" prefWidth="75.0" text="Marca" />
+            <TableColumn fx:id="tbcModelo" prefWidth="75.0" text="Modelo" />
+            <TableColumn fx:id="tbcEstado" prefWidth="75.0" text="Estado" />
+            <TableColumn fx:id="tbcVelocidadMax" prefWidth="75.0" text="Velocidad Maxima" />
+            <TableColumn fx:id="tbcCilindraje" prefWidth="75.0" text="Cilindraje" />
+            <TableColumn fx:id="tbcTransmision" prefWidth="75.0" text="Transmision" />
+            <TableColumn fx:id="tbcCombustible" prefWidth="75.0" text="Combustible" />
+            <TableColumn fx:id="tbcAbs" prefWidth="75.0" text="ABS" />
+            <TableColumn fx:id="tbcAireAcondicionado" prefWidth="75.0" text="Aire Acondicionado" />
+            <TableColumn fx:id="tbcCamaraReversa" prefWidth="75.0" text="Camara Reversa" />
+            <TableColumn fx:id="tbcNumPasajeros" prefWidth="75.0" text="Número Pasajeros" />
+            <TableColumn fx:id="tbcCapacidad" prefWidth="75.0" text="Capacidad" />
+            <TableColumn fx:id="tbcNumPuertas" prefWidth="75.0" text="Número de Puertas" />
+            <TableColumn fx:id="tbcNumBolsasAire" prefWidth="75.0" text="Número de Bolsas de Aire" />
+            <TableColumn fx:id="tbcNumEjes" prefWidth="75.0" text="Número de ejes" />
+            <TableColumn fx:id="tbcNumSalidasEmergencia" prefWidth="75.0" text="Número de salidas de emergencia" />
         </columns>
       </TableView>
       <Label layoutX="264.0" layoutY="93.0" text="Placa:">
@@ -41,14 +41,14 @@
             <Font name="System Bold Italic" size="22.0" />
          </font>
       </Label>
-      <TextField fx:id="btnText" layoutX="339.0" layoutY="93.0" opacity="0.5" />
-      <TextField fx:id="btnText1" layoutX="339.0" layoutY="135.0" opacity="0.5" />
+      <TextField fx:id="txtPlaca" layoutX="339.0" layoutY="93.0" opacity="0.5" />
+      <TextField fx:id="txtMarca" layoutX="339.0" layoutY="135.0" opacity="0.5" />
       <Label layoutX="256.0" layoutY="135.0" text="Marca:">
          <font>
             <Font name="System Bold Italic" size="22.0" />
          </font>
       </Label>
-      <TextField fx:id="btnText2" layoutX="339.0" layoutY="177.0" opacity="0.5" />
+      <TextField fx:id="txtModelo" layoutX="339.0" layoutY="177.0" opacity="0.5" />
       <Label layoutX="250.0" layoutY="177.0" text="Modelo:">
          <font>
             <Font name="System Bold Italic" size="22.0" />
@@ -59,14 +59,14 @@
             <Font name="System Bold Italic" size="22.0" />
          </font>
       </Label>
-      <TextField fx:id="btnText21" layoutX="339.0" layoutY="301.0" opacity="0.5" />
+      <TextField fx:id="txtCilindraje" layoutX="339.0" layoutY="301.0" opacity="0.5" />
       <Label layoutX="129.0" layoutY="260.0" text="Velocidad Máxima:">
          <font>
             <Font name="System Bold Italic" size="22.0" />
          </font>
       </Label>
-      <TextField fx:id="btnText11" layoutX="339.0" layoutY="261.0" opacity="0.5" />
-      <TextField fx:id="btnText3" layoutX="339.0" layoutY="221.0" opacity="0.5" />
+      <TextField fx:id="txtVelocidadMax" layoutX="339.0" layoutY="261.0" opacity="0.5" />
+      <TextField fx:id="txtEstado" layoutX="339.0" layoutY="221.0" opacity="0.5" />
       <Label layoutX="257.0" layoutY="220.0" text="Estado:">
          <font>
             <Font name="System Bold Italic" size="22.0" />
@@ -82,7 +82,7 @@
             <Font name="System Bold Italic" size="22.0" />
          </font>
       </Label>
-      <ComboBox layoutX="339.0" layoutY="387.0" prefHeight="31.0" prefWidth="279.0" promptText="Seleccione el tipo de combustible" />
+      <ComboBox fx:id="cbbCombustible" layoutX="339.0" layoutY="387.0" prefHeight="31.0" prefWidth="279.0" promptText="Seleccione el tipo de combustible" />
       <Label layoutX="845.0" layoutY="93.0" text="ABS:">
          <font>
             <Font name="System Bold Italic" size="22.0" />
@@ -108,12 +108,12 @@
             <Font name="System Bold Italic" size="22.0" />
          </font>
       </Label>
-      <CheckBox layoutX="915.0" layoutY="98.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="17.0" />
-      <CheckBox layoutX="916.0" layoutY="127.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="17.0" />
-      <CheckBox layoutX="915.0" layoutY="159.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="17.0" />
-      <TextField fx:id="btnText211" layoutX="339.0" layoutY="427.0" opacity="0.5" />
-      <TextField fx:id="btnText2111" layoutX="910.0" layoutY="189.0" opacity="0.5" />
-      <TextField fx:id="btnText2112" layoutX="910.0" layoutY="229.0" opacity="0.5" />
+      <CheckBox fx:id="cbAbs" layoutX="915.0" layoutY="98.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="17.0" />
+      <CheckBox fx:id="cbAireAcondicionado" layoutX="916.0" layoutY="127.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="17.0" />
+      <CheckBox fx:id="cbCamaraReversa" layoutX="915.0" layoutY="159.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="17.0" />
+      <TextField fx:id="txtCapacidad" layoutX="339.0" layoutY="427.0" opacity="0.5" />
+      <TextField fx:id="txtNumPasajeros" layoutX="910.0" layoutY="189.0" opacity="0.5" />
+      <TextField fx:id="txtNumPuertas" layoutX="910.0" layoutY="229.0" opacity="0.5" />
       <Label layoutX="702.0" layoutY="229.0" text="Número de Puertas:">
          <font>
             <Font name="System Bold Italic" size="22.0" />
@@ -124,8 +124,8 @@
             <Font name="System Bold Italic" size="22.0" />
          </font>
       </Label>
-      <TextField fx:id="btnText21121" layoutX="910.0" layoutY="268.0" opacity="0.5" />
-      <TextField fx:id="btnText211211" layoutX="909.0" layoutY="307.0" opacity="0.5" />
+      <TextField fx:id="txtNumBolsasAire" layoutX="910.0" layoutY="268.0" opacity="0.5" />
+      <TextField fx:id="txtNumEjes" layoutX="909.0" layoutY="307.0" opacity="0.5" />
       <Label layoutX="737.0" layoutY="306.0" text="Número de ejes:">
          <font>
             <Font name="System Bold Italic" size="22.0" />
@@ -136,7 +136,7 @@
             <Font name="System Bold Italic" size="22.0" />
          </font>
       </Label>
-      <TextField fx:id="btnText2112111" layoutX="909.0" layoutY="355.0" opacity="0.5" />
+      <TextField fx:id="txtNumSalidasEmergencia" layoutX="909.0" layoutY="355.0" opacity="0.5" />
       <Label layoutX="741.0" layoutY="371.0" text="de emergencia:">
          <font>
             <Font name="System Bold Italic" size="22.0" />

@@ -10,7 +10,7 @@
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6e9987" height="460.0" layoutX="27.0" layoutY="25.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1281.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6e9987" height="45.0" layoutX="524.0" layoutY="41.0" stroke="#114d4d" strokeType="INSIDE" width="308.0" />
-      <Label layoutX="527.0" layoutY="41.0" prefHeight="45.0" prefWidth="308.0" text="Registo de Deportivo:">
+      <Label layoutX="527.0" layoutY="41.0" prefHeight="45.0" prefWidth="308.0" text="Registro de Deportivo">
          <font>
             <Font name="System Bold Italic" size="30.0" />
          </font>
@@ -69,7 +69,7 @@
             <Font name="System Bold Italic" size="22.0" />
          </font>
       </Label>
-      <Label layoutX="199.0" layoutY="344.0" text="Transimisión:">
+      <Label layoutX="199.0" layoutY="344.0" text="Transmisión:">
          <font>
             <Font name="System Bold Italic" size="22.0" />
          </font>

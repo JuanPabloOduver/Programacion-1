@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
@@ -10,27 +10,17 @@
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="382.0" prefWidth="502.0" style="-fx-background-color: #e0e4ce;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="HARD_LIGHT" fill="#6e9987" height="263.0" layoutX="52.0" layoutY="73.0" opacity="0.75" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="399.0" />
-      <ImageView fx:id="txtUsuario" fitHeight="135.0" fitWidth="134.0" layoutX="333.0" layoutY="-26.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="txtUsuario" fitHeight="135.0" fitWidth="134.0" layoutX="184.0" layoutY="-28.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../imagenes/Logo%20Tu%20Carro%20UQ%20sin%20fondo.png" />
          </image>
       </ImageView>
-      <Label layoutX="52.0" layoutY="21.0" text="Bienvenido Empleado ">
-         <font>
-            <Font name="System Bold Italic" size="27.0" />
-         </font>
-      </Label>
-      <Button fx:id="btnRegistroTransacciones" layoutX="146.0" layoutY="258.0" mnemonicParsing="false" onAction="#onOpenMenuEmpleado" prefHeight="49.0" prefWidth="210.0" style="-fx-background-color: #114d4d;" text="Registro de Transacciones" textFill="WHITE">
-         <font>
-            <Font name="System Bold Italic" size="12.0" />
-         </font>
-      </Button>
-      <Button fx:id="btnRegistrarCliente" layoutX="147.0" layoutY="191.0" mnemonicParsing="false" onAction="#onOpenRegistrarCliente" prefHeight="49.0" prefWidth="210.0" style="-fx-background-color: #114d4d;" text="Gestionar Cliente" textFill="WHITE">
+      <Button fx:id="btnMarketplaceVehiculos" layoutX="111.0" layoutY="222.0" mnemonicParsing="false" onAction="#onOpenMarketplaceVehiculos" prefHeight="57.0" prefWidth="281.0" style="-fx-background-color: #114d4d;" text="Marketplace Vehículos" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="btnGestionarVehiculo" layoutX="147.0" layoutY="128.0" mnemonicParsing="false" onAction="#onOpenGestionarVehiculo" prefHeight="49.0" prefWidth="210.0" style="-fx-background-color: #114d4d;" text="Gestionar Vehículo" textFill="WHITE">
+      <Button fx:id="btnRegistrarVehiculo" layoutX="111.0" layoutY="148.0" mnemonicParsing="false" onAction="#onOpenRegistrarVehiculo" prefHeight="57.0" prefWidth="281.0" style="-fx-background-color: #114d4d;" text="Registrar Vehículo" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="15.0" />
          </font>

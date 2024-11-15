@@ -9,8 +9,8 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="835.0" prefWidth="1335.0" style="-fx-background-color: #e0e4ce;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6e9987" height="460.0" layoutX="27.0" layoutY="25.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1281.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6e9987" height="45.0" layoutX="527.0" layoutY="37.0" stroke="#114d4d" strokeType="INSIDE" width="247.0" />
-      <Label layoutX="530.0" layoutY="37.0" prefHeight="45.0" prefWidth="247.0" text="Registo de Sedán">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6e9987" height="45.0" layoutX="527.0" layoutY="37.0" stroke="#114d4d" strokeType="INSIDE" width="257.0" />
+      <Label layoutX="530.0" layoutY="37.0" prefHeight="45.0" prefWidth="257.0" text="Registro de Sedán">
          <font>
             <Font name="System Bold Italic" size="30.0" />
          </font>
@@ -74,7 +74,7 @@
             <Font name="System Bold Italic" size="22.0" />
          </font>
       </Label>
-      <Label layoutX="199.0" layoutY="344.0" text="Transimisión:">
+      <Label layoutX="199.0" layoutY="344.0" text="Transmisión:">
          <font>
             <Font name="System Bold Italic" size="22.0" />
          </font>

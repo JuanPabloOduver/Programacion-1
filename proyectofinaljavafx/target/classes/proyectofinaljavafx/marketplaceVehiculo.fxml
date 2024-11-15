@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="662.0" prefWidth="1296.0" style="-fx-background-color: #e0e4ce;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView layoutX="14.0" layoutY="97.0" prefHeight="468.0" prefWidth="1267.0" style="-fx-background-color: #6e9987;">
+         <columns>
+            <TableColumn prefWidth="49.0" text="Placa" />
+            <TableColumn prefWidth="269.0" text="Nombre del cliente" />
+            <TableColumn prefWidth="149.0" text="Placa del vehículo" />
+            <TableColumn prefWidth="149.0" text="Cuota de intereses" />
+            <TableColumn prefWidth="149.0" text="Codigo del tramite" />
+         </columns>
+      </TableView>
+      <Label layoutX="486.0" layoutY="21.0" prefHeight="45.0" prefWidth="323.0" text="Marketplace Vehículos">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

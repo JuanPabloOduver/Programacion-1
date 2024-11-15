@@ -9,8 +9,8 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="835.0" prefWidth="1335.0" style="-fx-background-color: #e0e4ce;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6e9987" height="460.0" layoutX="27.0" layoutY="25.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1281.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6e9987" height="45.0" layoutX="551.0" layoutY="41.0" stroke="#114d4d" strokeType="INSIDE" width="231.0" />
-      <Label layoutX="554.0" layoutY="41.0" prefHeight="45.0" prefWidth="231.0" text="Registo de Moto">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6e9987" height="45.0" layoutX="551.0" layoutY="41.0" stroke="#114d4d" strokeType="INSIDE" width="246.0" />
+      <Label layoutX="554.0" layoutY="41.0" prefHeight="45.0" prefWidth="246.0" text="Registro de Moto">
          <font>
             <Font name="System Bold Italic" size="30.0" />
          </font>
@@ -65,7 +65,7 @@
             <Font name="System Bold Italic" size="22.0" />
          </font>
       </Label>
-      <Label layoutX="199.0" layoutY="344.0" text="Transimisión:">
+      <Label layoutX="199.0" layoutY="344.0" text="Transmisión:">
          <font>
             <Font name="System Bold Italic" size="22.0" />
          </font>

@@ -15,13 +15,13 @@
             <Font name="System Bold Italic" size="30.0" />
          </font>
       </Label>
-      <TableView layoutX="27.0" layoutY="498.0" prefHeight="323.0" prefWidth="816.0" style="-fx-background-color: #e0e4ce;">
+      <TableView fx:id="tbTransaccion" layoutX="27.0" layoutY="498.0" prefHeight="323.0" prefWidth="816.0" style="-fx-background-color: #e0e4ce;">
          <columns>
-            <TableColumn prefWidth="165.0" text="Nombre del empleado" />
-            <TableColumn prefWidth="142.0" text="Nombre del cliente" />
-            <TableColumn prefWidth="162.0" text="Placa del vehículo" />
-            <TableColumn prefWidth="167.0" text="Cuota de intereses" />
-            <TableColumn prefWidth="182.0" text="Codigo del tramite" />
+            <TableColumn fx:id="tbcNombreEmpleado" prefWidth="165.0" text="Nombre del empleado" />
+            <TableColumn fx:id="tbcNombreCliente" prefWidth="142.0" text="Nombre del cliente" />
+            <TableColumn fx:id="tbcPlacaVehiculo" prefWidth="162.0" text="Placa del vehículo" />
+            <TableColumn fx:id="tbcCuotaIntereses" prefWidth="167.0" text="Cuota de intereses" />
+            <TableColumn fx:id="tbcCodigoTramite" prefWidth="182.0" text="Codigo del tramite" />
          </columns>
       </TableView>
       <Label layoutX="188.0" layoutY="145.0" text="Nombre del empleado:">
@@ -29,14 +29,14 @@
             <Font name="System Bold Italic" size="22.0" />
          </font>
       </Label>
-      <TextField fx:id="btnText" layoutX="428.0" layoutY="145.0" opacity="0.5" prefHeight="31.0" prefWidth="256.0" />
-      <TextField fx:id="btnText1" layoutX="428.0" layoutY="187.0" opacity="0.5" prefHeight="31.0" prefWidth="256.0" />
+      <TextField fx:id="txtNiombreEmpleado" layoutX="428.0" layoutY="145.0" opacity="0.5" prefHeight="31.0" prefWidth="256.0" />
+      <TextField fx:id="txtNombreCliente" layoutX="428.0" layoutY="187.0" opacity="0.5" prefHeight="31.0" prefWidth="256.0" />
       <Label layoutX="219.0" layoutY="187.0" text="Nombre del cliente:">
          <font>
             <Font name="System Bold Italic" size="22.0" />
          </font>
       </Label>
-      <TextField fx:id="btnText2" layoutX="428.0" layoutY="229.0" opacity="0.5" prefHeight="31.0" prefWidth="256.0" />
+      <TextField fx:id="txtPlacaVehiculo" layoutX="428.0" layoutY="229.0" opacity="0.5" prefHeight="31.0" prefWidth="256.0" />
       <Label layoutX="229.0" layoutY="229.0" text="Placa del vehículo:">
          <font>
             <Font name="System Bold Italic" size="22.0" />
@@ -47,8 +47,8 @@
             <Font name="System Bold Italic" size="22.0" />
          </font>
       </Label>
-      <TextField fx:id="btnText11" layoutX="428.0" layoutY="313.0" opacity="0.5" prefHeight="31.0" prefWidth="256.0" />
-      <TextField fx:id="btnText3" layoutX="428.0" layoutY="273.0" opacity="0.5" prefHeight="31.0" prefWidth="256.0" />
+      <TextField fx:id="txtCodigoTramite" layoutX="428.0" layoutY="313.0" opacity="0.5" prefHeight="31.0" prefWidth="256.0" />
+      <TextField fx:id="txtCuotaIntereses" layoutX="428.0" layoutY="273.0" opacity="0.5" prefHeight="31.0" prefWidth="256.0" />
       <Label layoutX="228.0" layoutY="273.0" text="Cuota de intereses:">
          <font>
             <Font name="System Bold Italic" size="22.0" />

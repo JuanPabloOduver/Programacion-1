@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="820.0" style="-fx-background-color: #e0e4ce;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.viewController.ListaTramitesViewController">
+   <children>
+      <TableView fx:id="tbListaTramites" layoutX="14.0" layoutY="84.0" prefHeight="468.0" prefWidth="790.0" style="-fx-background-color: #6e9987;">
+        <columns>
+          <TableColumn fx:id="tbcNombreEmpleado" prefWidth="203.0" text="Nombre del empleado" />
+          <TableColumn fx:id="tbcNombreCliente" prefWidth="172.0" text="Nombre del cliente" />
+            <TableColumn fx:id="tbcPlacaVehiculo" prefWidth="182.0" text="Placa del vehículo" />
+            <TableColumn fx:id="tbcCodigo" prefWidth="232.0" text="Codigo del tramite" />
+        </columns>
+      </TableView>
+      <Label layoutX="242.0" layoutY="22.0" prefHeight="45.0" prefWidth="323.0" text="Lista de Transacciones">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnVolver" layoutX="25.0" layoutY="29.0" mnemonicParsing="false" onAction="#onOpenCrudAdmin" style="-fx-background-color: #6e9987;" text="Volver">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

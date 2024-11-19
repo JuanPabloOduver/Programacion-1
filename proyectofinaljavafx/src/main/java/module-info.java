@@ -1,7 +1,10 @@
-module proyectofinaljavafx {
+module co.edu.uniquindio.poo {
     requires javafx.controls;
     requires javafx.fxml;
+    requires javafx.base;
 
-    opens proyectofinaljavafx to javafx.fxml;
-    exports proyectofinaljavafx;
+    opens co.edu.uniquindio.poo to javafx.fxml;
+    exports co.edu.uniquindio.poo;
+    exports co.edu.uniquindio.poo.viewController;
+    opens co.edu.uniquindio.poo.viewController to javafx.fxml;
 }

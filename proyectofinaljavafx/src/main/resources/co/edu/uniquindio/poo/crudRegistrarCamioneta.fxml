@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="835.0" prefWidth="1335.0" style="-fx-background-color: #e0e4ce;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.viewController.CrudCamionetaViewController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6e9987" height="460.0" layoutX="27.0" layoutY="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1281.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6e9987" height="45.0" layoutX="474.0" layoutY="33.0" stroke="#114d4d" strokeType="INSIDE" width="328.0" />
+      <Label layoutX="477.0" layoutY="33.0" prefHeight="45.0" prefWidth="321.0" text="Registro de Camioneta">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tbCamioneta" layoutX="27.0" layoutY="498.0" prefHeight="323.0" prefWidth="1281.0" style="-fx-background-color: #e0e4ce;">
+         <columns>
+            <TableColumn fx:id="tbcPlaca" prefWidth="75.0" text="Placa" />
+            <TableColumn fx:id="tbcMarca" prefWidth="75.0" text="Marca" />
+            <TableColumn fx:id="tbcModelo" prefWidth="75.0" text="Modelo" />
+            <TableColumn fx:id="tbcEstado" prefWidth="75.0" text="Estado" />
+            <TableColumn fx:id="tbcVelocidad" prefWidth="75.0" text="Velocidad Maxima" />
+            <TableColumn fx:id="tbcCilindraje" prefWidth="75.0" text="Cilindraje" />
+            <TableColumn fx:id="tbcTransmision" prefWidth="75.0" text="Transmision" />
+            <TableColumn fx:id="tbcCombustible" prefWidth="75.0" text="Combustible" />
+            <TableColumn fx:id="tbcAbs" prefWidth="75.0" text="ABS" />
+            <TableColumn fx:id="tbcAireAcondicionado" prefWidth="75.0" text="Aire Acondicionado" />
+            <TableColumn fx:id="tbcCamaraReversa" prefWidth="75.0" text="Camara Reversa" />
+            <TableColumn fx:id="tbcNumPasajeros" prefWidth="75.0" text="Número Pasajeros" />
+            <TableColumn fx:id="tbcCapacidad" prefWidth="75.0" text="Capacidad" />
+            <TableColumn fx:id="tbcNumPuertas" prefWidth="75.0" text="Número de Puertas" />
+            <TableColumn fx:id="tbcNumBolsasAire" prefWidth="75.0" text="Número de Bolsas de Aire" />
+            <TableColumn fx:id="tbcVelocidadCrucero" prefWidth="75.0" text="Velocidad Crucero" />
+            <TableColumn fx:id="tbcSensorColision" prefWidth="75.0" text="Sensor de colisión" />
+            <TableColumn fx:id="tbcSensorTraficoCruzado" prefWidth="75.0" text="Sensor trafico cruzado" />
+            <TableColumn fx:id="tbcAsistentePermanenciaCarril" prefWidth="75.0" text="Asistente permanencia carril" />
+            <TableColumn fx:id="tbcEs4x4" prefWidth="75.0" text="¿Es 4x4?" />
+         </columns>
+      </TableView>
+      <TextField fx:id="txtNumPuertas" layoutX="913.0" layoutY="191.0" opacity="0.5" />
+      <Label layoutX="705.0" layoutY="191.0" text="Número de Puertas:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="636.0" layoutY="229.0" text="Número de bolsas de aire:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNumBolsasAire" layoutX="913.0" layoutY="230.0" opacity="0.5" />
+      <Button fx:id="btnRegistrarVehiculo" layoutX="679.0" layoutY="425.0" mnemonicParsing="false" onAction="#onRegistrar" style="-fx-background-color: #114d4d;" text="Registrar Vehículo" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEliminarVehiculo" layoutX="868.0" layoutY="425.0" mnemonicParsing="false" onAction="#onEliminar" style="-fx-background-color: #114d4d;" text="Eliminar Vehículo" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnLimpiar" layoutX="1048.0" layoutY="425.0" mnemonicParsing="false" onAction="#onLimpiar" prefHeight="38.0" prefWidth="154.0" style="-fx-background-color: #114d4d;" text="Limpiar" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnVolver" layoutX="46.0" layoutY="32.0" mnemonicParsing="false" onAction="#onOpenRegistrarVehiculo" style="-fx-background-color: #6e9987;" text="Volver">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <Text fontSmoothingType="LCD" layoutX="35.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;" wrappingWidth="28.26123046875">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <CheckBox fx:id="cbSensorTraficoCruzado" layoutX="897.0" layoutY="327.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="17.0" />
+      <CheckBox fx:id="cbSensorColision" layoutX="898.0" layoutY="295.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="17.0" />
+      <CheckBox fx:id="cbVelocidadCrucero" layoutX="897.0" layoutY="266.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="17.0" />
+      <Label layoutX="616.0" layoutY="322.0" text="Sensor de tráfico cruzado: ">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="689.0" layoutY="290.0" text="Sensor de colisión:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="652.0" layoutY="260.0" text="Velocidad del crucero:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="933.0" layoutY="263.0" text="Asistente de permanencia de carril:">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="1125.0" layoutY="290.0" text="¿Es 4x4?">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="cbAsistentePermanenciaCarril" layoutX="1219.0" layoutY="265.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="17.0" />
+      <CheckBox fx:id="cbEs4x4" layoutX="1220.0" layoutY="294.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="17.0" />
+      <TextField fx:id="txtCapacidad" layoutX="349.0" layoutY="428.0" opacity="0.5" />
+      <Label layoutX="220.0" layoutY="427.0" text="Capacidad:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cbbCombustible" layoutX="349.0" layoutY="388.0" prefHeight="31.0" prefWidth="279.0" promptText="Seleccione el tipo de combustible" />
+      <Label layoutX="209.0" layoutY="387.0" text="Combustible:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="209.0" layoutY="345.0" text="Transimisión:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtVelocidadMax" layoutX="349.0" layoutY="262.0" opacity="0.5" />
+      <Label layoutX="139.0" layoutY="261.0" text="Velocidad Máxima:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCilindraje" layoutX="349.0" layoutY="302.0" opacity="0.5" />
+      <Label layoutX="239.0" layoutY="301.0" text="Cilindraje:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="260.0" layoutY="178.0" text="Modelo:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtModelo" layoutX="349.0" layoutY="178.0" opacity="0.5" />
+      <Label layoutX="266.0" layoutY="136.0" text="Marca:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtMarca" layoutX="349.0" layoutY="136.0" opacity="0.5" />
+      <TextField fx:id="txtPlaca" layoutX="349.0" layoutY="94.0" opacity="0.5" />
+      <Label layoutX="274.0" layoutY="94.0" text="Placa:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cbbTransmision" layoutX="349.0" layoutY="346.0" prefHeight="31.0" prefWidth="279.0" promptText="Seleccione el tipo de transmisión" />
+      <TextField fx:id="txtNumPasajeros" layoutX="913.0" layoutY="152.0" opacity="0.5" />
+      <CheckBox fx:id="cbCamaraReversa" layoutX="918.0" layoutY="122.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="17.0" />
+      <CheckBox fx:id="cbAireAcondicionado" layoutX="919.0" layoutY="90.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="17.0" />
+      <CheckBox fx:id="cbAbs" layoutX="918.0" layoutY="61.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="17.0" />
+      <Label layoutX="725.0" layoutY="116.0" text="Camara Reversa:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="705.0" layoutY="151.0" text="Número Pasajeros: ">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="694.0" layoutY="84.0" text="Aire Acondicionado:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="848.0" layoutY="56.0" text="ABS:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="263.0" layoutY="220.0" text="Estado:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cbbEstado" layoutX="345.0" layoutY="221.0" prefHeight="31.0" prefWidth="279.0" promptText="Seleccione el tipo de estado" />
+   </children>
+</AnchorPane>

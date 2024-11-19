@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="382.0" prefWidth="502.0" style="-fx-background-color: #e0e4ce;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.viewController.MenuAdminViewController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="HARD_LIGHT" fill="#6e9987" height="263.0" layoutX="52.0" layoutY="73.0" opacity="0.75" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="399.0" />
+      <ImageView fx:id="txtUsuario" fitHeight="135.0" fitWidth="134.0" layoutX="333.0" layoutY="-26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Imagenes/Logo%20Tu%20Carro%20UQ%20sin%20fondo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="52.0" layoutY="21.0" text="Bienvenido Administrador">
+         <font>
+            <Font name="System Bold Italic" size="23.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnGestionarEmpleados" layoutX="139.0" layoutY="167.0" mnemonicParsing="false" onAction="#onOpenGestionarEmpleados" prefHeight="49.0" prefWidth="225.0" style="-fx-background-color: #114d4d;" text="Gestionar Empleados" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnReporteTramites" layoutX="139.0" layoutY="225.0" mnemonicParsing="false" onAction="#onOpenReporteTramites" prefHeight="49.0" prefWidth="225.0" style="-fx-background-color: #114d4d;" text="Reporte Tramites" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="139.0" layoutY="91.0" text="¿Que quieres hacer hoy?">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Text fontSmoothingType="LCD" layoutX="14.0" layoutY="358.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;" wrappingWidth="28.26123046875">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Button fx:id="btnVolver" layoutX="35.0" layoutY="334.0" mnemonicParsing="false" onAction="#onOpenIniciarSesion" style="-fx-background-color: #e0e4ce;" text="Volver">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

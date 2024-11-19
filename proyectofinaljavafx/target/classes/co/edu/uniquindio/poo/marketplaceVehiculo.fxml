@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="648.0" prefWidth="1296.0" style="-fx-background-color: #e0e4ce;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.viewController.MarketplaceVehiculoViewController">
+   <children>
+      <TableView layoutX="15.0" layoutY="76.0" prefHeight="468.0" prefWidth="1267.0" style="-fx-background-color: #6e9987;">
+         <columns>
+            <TableColumn prefWidth="128.0" text="Placa" />
+            <TableColumn prefWidth="190.0" text="Marca" />
+            <TableColumn prefWidth="149.0" text="Modelo" />
+            <TableColumn prefWidth="106.0" text="Estado" />
+            <TableColumn prefWidth="170.0" text="Velocidad Maxima" />
+            <TableColumn prefWidth="121.0" text="Cilindraje" />
+            <TableColumn prefWidth="167.0" text="Transmision" />
+            <TableColumn prefWidth="126.0" text="Combustible" />
+            <TableColumn prefWidth="107.0" text="Disponibilidad" />
+         </columns>
+      </TableView>
+      <Label layoutX="487.0" layoutY="23.0" prefHeight="45.0" prefWidth="323.0" text="Marketplace Vehículos">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Label>
+      <Text fontSmoothingType="LCD" layoutX="24.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;" wrappingWidth="28.26123046875">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Button fx:id="btnVolver" layoutX="35.0" layoutY="23.0" mnemonicParsing="false" onAction="#onOpenGestionarVehiculos" style="-fx-background-color: #e0e4ce;" text="Volver">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEliminarVehiculo" layoutX="657.0" layoutY="571.0" mnemonicParsing="false" onAction="#onAlquilarVehiculo" style="-fx-background-color: #114d4d;" text="Alquilar Vehículo" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnRegistrarVehiculo" layoutX="477.0" layoutY="571.0" mnemonicParsing="false" onAction="#onVenderVehiculo" style="-fx-background-color: #114d4d;" text="Vender Vehículo" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

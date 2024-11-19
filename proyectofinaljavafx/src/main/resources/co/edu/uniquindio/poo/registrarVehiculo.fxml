@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="426.0" prefWidth="536.0" style="-fx-background-color: #e0e4ce;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.viewController.RegistrarVehiculosViewController">
+   <children>
+      <ImageView fx:id="txtUsuario" fitHeight="126.0" fitWidth="135.0" layoutX="326.0" layoutY="-8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Imagenes/Tu%20Carro.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="HARD_LIGHT" fill="#6e9987" height="324.0" layoutX="62.0" layoutY="83.0" opacity="0.75" stroke="#6e9987" strokeType="INSIDE" width="399.0" />
+      <Label layoutX="119.0" layoutY="83.0" text="¿Que vehículo quieres registrar?" textFill="#2d3839">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnRegistrarPickUp" layoutX="277.0" layoutY="116.0" mnemonicParsing="false" onAction="#onOpenRegistrarPickUp" prefHeight="49.0" prefWidth="170.0" style="-fx-background-color: #114d4d;" text="PICK UP" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnRegistrarVan" layoutX="277.0" layoutY="174.0" mnemonicParsing="false" onAction="#onOpenRegistrarVan" prefHeight="49.0" prefWidth="170.0" style="-fx-background-color: #114d4d;" text="VAN" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnRegistrarBus" layoutX="277.0" layoutY="229.0" mnemonicParsing="false" onAction="#onOpenRegistrarBus" prefHeight="49.0" prefWidth="170.0" style="-fx-background-color: #114d4d;" text="BUS" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnRegistrarDeportivo" layoutX="75.0" layoutY="229.0" mnemonicParsing="false" onAction="#onOpenRegistrarDeportivo" prefHeight="49.0" prefWidth="170.0" style="-fx-background-color: #114d4d;" text="DEPORTIVO" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnRegistrarSedan" layoutX="75.0" layoutY="174.0" mnemonicParsing="false" onAction="#onOpenRegistrarSedan" prefHeight="49.0" prefWidth="170.0" style="-fx-background-color: #114d4d;" text="SEDÁN" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="60.0" layoutY="40.0" prefHeight="39.0" prefWidth="283.0" text="Bienvenido Empleado " textFill="#2d3839">
+         <font>
+            <Font name="System Bold Italic" size="27.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnRegistrarMoto" layoutX="75.0" layoutY="116.0" mnemonicParsing="false" onAction="#onOpenRegistrarMoto" prefHeight="49.0" prefWidth="170.0" style="-fx-background-color: #114d4d;" text="MOTO" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnRegistrarCamioneta" layoutX="75.0" layoutY="285.0" mnemonicParsing="false" onAction="#onOpenRegistrarCamioneta" prefHeight="49.0" prefWidth="170.0" style="-fx-background-color: #114d4d;" text="CAMIONETA" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnRegistrarCamion" layoutX="277.0" layoutY="285.0" mnemonicParsing="false" onAction="#onOpenRegistrarCamion" prefHeight="49.0" prefWidth="170.0" style="-fx-background-color: #114d4d;" text="CAMIÓN" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnVolver" layoutX="35.0" layoutY="14.0" mnemonicParsing="false" onAction="#onOpenPrimary" style="-fx-background-color: #e0e4ce;" text="Volver">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <Text fontSmoothingType="LCD" layoutX="24.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;" wrappingWidth="28.26123046875">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Button fx:id="btnRegistrarCamion1" layoutX="278.0" layoutY="345.0" mnemonicParsing="false" onAction="#onOpenRegistrarElectrico" prefHeight="49.0" prefWidth="170.0" style="-fx-background-color: #114d4d;" text="ELÉCTRICO" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnRegistrarCamioneta1" layoutX="76.0" layoutY="345.0" mnemonicParsing="false" onAction="#onOpenRegistrarHibrido" prefHeight="49.0" prefWidth="170.0" style="-fx-background-color: #114d4d;" text="HÍBRIDO" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="835.0" prefWidth="1139.0" style="-fx-background-color: #e0e4ce;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.viewController.CrudClientesViewController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6e9987" height="460.0" layoutX="27.0" layoutY="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1075.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6e9987" height="45.0" layoutX="418.0" layoutY="25.0" stroke="#114d4d" strokeType="INSIDE" width="269.0" />
+      <Label layoutX="427.0" layoutY="25.0" prefHeight="45.0" prefWidth="269.0" text="Registo de Cliente">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tbClientes" layoutX="27.0" layoutY="498.0" prefHeight="323.0" prefWidth="1075.0" style="-fx-background-color: #e0e4ce;">
+         <columns>
+            <TableColumn fx:id="tbcNombreCliente" prefWidth="145.0" text="Nombre" />
+            <TableColumn fx:id="tbcApellidoCliente" prefWidth="134.0" text="Apellido" />
+            <TableColumn fx:id="tbcCedulaCliente" prefWidth="169.0" text="Cédula" />
+            <TableColumn fx:id="tbcEdadCliente" prefWidth="92.0" text="Edad" />
+            <TableColumn fx:id="tbcEmailCliente" prefWidth="178.0" text="E-mail" />
+            <TableColumn fx:id="tbcTelefonoCliente" prefWidth="148.0" text="Teléfono" />
+            <TableColumn fx:id="tbcContraseniaCliente" prefWidth="207.0" text="Contraseña" />
+         </columns>
+      </TableView>
+      <Label layoutX="343.0" layoutY="94.0" text="Nombre:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNombre" layoutX="436.0" layoutY="94.0" opacity="0.5" prefHeight="31.0" prefWidth="256.0" />
+      <TextField fx:id="txtApellido" layoutX="436.0" layoutY="136.0" opacity="0.5" prefHeight="31.0" prefWidth="256.0" />
+      <Label layoutX="342.0" layoutY="136.0" text="Apellido:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCedula" layoutX="436.0" layoutY="178.0" opacity="0.5" prefHeight="31.0" prefWidth="256.0" />
+      <Label layoutX="353.0" layoutY="178.0" text="Cédula:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="333.0" layoutY="302.0" text="Teléfono:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtTelefono" layoutX="437.0" layoutY="302.0" opacity="0.5" prefHeight="31.0" prefWidth="256.0" />
+      <Label layoutX="355.0" layoutY="262.0" text="E-mail:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txxtEmail" layoutX="436.0" layoutY="262.0" opacity="0.5" prefHeight="31.0" prefWidth="256.0" />
+      <TextField fx:id="txtEdad" layoutX="436.0" layoutY="219.0" opacity="0.5" prefHeight="31.0" prefWidth="256.0" />
+      <Label layoutX="372.0" layoutY="222.0" text="Edad:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="305.0" layoutY="346.0" text="Contraseña:">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnRegistrarCliente" layoutX="303.0" layoutY="399.0" mnemonicParsing="false" onAction="#onRegistrarCliente" style="-fx-background-color: #114d4d;" text="Registrar Cliente" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEliminarCliente" layoutX="492.0" layoutY="399.0" mnemonicParsing="false" onAction="#onEliminarCliente" style="-fx-background-color: #114d4d;" text="Eliminar Cliente" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnLimpiar" layoutX="672.0" layoutY="399.0" mnemonicParsing="false" onAction="#onLimpiar" prefHeight="38.0" prefWidth="154.0" style="-fx-background-color: #114d4d;" text="Limpiar" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnVolver" layoutX="46.0" layoutY="32.0" mnemonicParsing="false" onAction="#onOpenMenuEmpleado" style="-fx-background-color: #6e9987;" text="Volver">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <Text fontSmoothingType="LCD" layoutX="35.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;" wrappingWidth="28.26123046875">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtContrasenia" layoutX="436.0" layoutY="346.0" opacity="0.5" prefHeight="31.0" prefWidth="256.0" />
+   </children>
+</AnchorPane>

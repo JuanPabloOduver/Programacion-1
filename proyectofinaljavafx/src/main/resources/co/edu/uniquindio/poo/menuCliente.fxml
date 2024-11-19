@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="767.0" prefWidth="1296.0" style="-fx-background-color: #e0e4ce;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.viewController.MenuClienteViewController">
+   <children>
+      <TableView fx:id="tbMenuCliente" layoutX="15.0" layoutY="76.0" prefHeight="632.0" prefWidth="1267.0" style="-fx-background-color: #6e9987;">
+         <columns>
+            <TableColumn fx:id="tbcPlaca" prefWidth="74.0" text="Placa" />
+            <TableColumn fx:id="tbcMarca" prefWidth="88.0" text="Marca" />
+            <TableColumn fx:id="tbcModelo" prefWidth="77.0" text="Modelo" />
+            <TableColumn fx:id="tbcEstado" prefWidth="82.0" text="Estado" />
+            <TableColumn fx:id="tbcVelocidad" prefWidth="74.0" text="Velocidad Maxima" />
+            <TableColumn fx:id="tbcCilindraje" prefWidth="91.0" text="Cilindraje" />
+            <TableColumn fx:id="tbcTransmision" prefWidth="79.0" text="Transmision" />
+            <TableColumn fx:id="tbcCombustible" prefWidth="79.0" text="Combustible" />
+            <TableColumn fx:id="tbcNumPuertas" prefWidth="87.0" text="Numero de Puertas" />
+            <TableColumn fx:id="tbcNumBolsasAire" prefWidth="87.0" text="Numero de Bolsas de Aire" />
+            <TableColumn fx:id="tbcVelocidadCrucero" prefWidth="87.0" text="Velocidad Crucero" />
+            <TableColumn fx:id="tbcSensorDeColision" prefWidth="77.0" text="Sensor de Colisión" />
+            <TableColumn fx:id="tbcSensorTraficoCruzado" prefWidth="79.0" text="Sensor de Trafico Cruzado" />
+            <TableColumn fx:id="tbcAsistentePermanenciaCarril" prefWidth="89.0" text="Asistente de Permanencia Carril" />
+            <TableColumn fx:id="tbcEs4x4" prefWidth="85.0" text="¿Es 4x4?" />
+            <TableColumn fx:id="tbcColor" prefWidth="85.0" text="Color" />
+            <TableColumn fx:id="tbcEsEnchufable" prefWidth="85.0" text="¿Es enchufable?" />
+            <TableColumn fx:id="tbcDuracionBateria" prefWidth="85.0" text="Duración de la batería" />
+            <TableColumn fx:id="tbcTiempoEnCargar" prefWidth="85.0" text="Tiempo en cargar" />
+            <TableColumn fx:id="tbcNumCaballosFuerza" prefWidth="85.0" text="Numero de caballos de fuerza" />
+            <TableColumn fx:id="tbcEnCuantoAlcanza100km" prefWidth="85.0" text="¿En cuanto tiempo alcanza los 100km?" />
+         </columns>
+      </TableView>
+      <Label layoutX="516.0" layoutY="21.0" prefHeight="45.0" prefWidth="265.0" text="Bienvenido cliente">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Label>
+      <Text fontSmoothingType="LCD" layoutX="15.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;" wrappingWidth="28.26123046875">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Button fx:id="btnVolver" layoutX="26.0" layoutY="21.0" mnemonicParsing="false" onAction="#onOpenIniciarSesion" style="-fx-background-color: #e0e4ce;" text="Volver">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
